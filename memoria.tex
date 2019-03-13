@@ -1,0 +1,530 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Plantilla de memoria en LaTeX para la ETSIT - Universidad Rey Juan Carlos
+%%
+%% Por Gregorio Robles <grex arroba gsyc.urjc.es>
+%%     Grupo de Sistemas y Comunicaciones
+%%     Escuela Técnica Superior de Ingenieros de Telecomunicación
+%%     Universidad Rey Juan Carlos
+%% (muchas ideas tomadas de Internet, colegas del GSyC, antiguos alumnos...
+%%  etc. Muchas gracias a todos)
+%%
+%% La última versión de esta plantilla está siempre disponible en:
+%%     https://github.com/gregoriorobles/plantilla-memoria
+%%
+%% Para obtener PDF, ejecuta en la shell:
+%%   make
+%% (las imágenes deben ir en PNG o JPG)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper, 12pt]{book}
+%\usepackage[T1]{fontenc}
+
+\usepackage[a4paper, left=2.5cm, right=2.5cm, top=3cm, bottom=3cm]{geometry}
+\usepackage{times}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel} % Comenta esta línea si tu memoria es en inglés
+\usepackage{url}
+%\usepackage[dvipdfm]{graphicx}
+\usepackage{graphicx}
+\usepackage{float}  %% H para posicionar figuras
+\usepackage[nottoc, notlot, notlof, notindex]{tocbibind} %% Opciones de índice
+\usepackage{latexsym}  %% Logo LaTeX
+\usepackage{multicol}
+
+\title{Memoria del Proyecto}
+\author{Nombre del autor}
+
+\renewcommand{\baselinestretch}{1.5}  %% Interlineado
+
+\begin{document}
+
+\renewcommand{\refname}{Bibliografía}  %% Renombrando
+\renewcommand{\appendixname}{Apéndice}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PORTADA
+
+\begin{titlepage}
+\begin{center}
+\begin{tabular}[c]{c c}
+%\includegraphics[bb=0 0 194 352, scale=0.25]{logo} &
+\includegraphics[scale=0.25]{img/logo_vect.png} &
+\begin{tabular}[b]{l}
+\Huge
+\textsf{UNIVERSIDAD} \\
+\Huge
+\textsf{REY JUAN CARLOS} \\
+\end{tabular}
+\\
+\end{tabular}
+
+\vspace{3cm}
+
+\Large
+GRADO EN INGENIERÍA EN TECNOLOGÍAS DE LA TELECOMUNICACIÓN
+
+\vspace{0.4cm}
+
+\large
+Curso Académico 2018/2019
+
+\vspace{0.8cm}
+
+Trabajo Fin de Grado/Máster
+
+\vspace{2.5cm}
+
+\LARGE
+APLICACIÓN WEB PARA LA CREACIÓN DE EVENTOS DEPORTIVOS EN LOCALIZACIÓN DETERMINADA
+
+\vspace{4cm}
+
+\large
+Autor : Jesús José Moreno Pinto \\
+Tutor : Pedro de las Heras Quirós
+\end{center}
+\end{titlepage}
+
+\newpage
+\mbox{}
+\thispagestyle{empty} % para que no se numere esta pagina
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Para firmar
+\clearpage
+\pagenumbering{gobble}
+\chapter*{}
+
+\vspace{-4cm}
+\begin{center}
+\LARGE
+\textbf{Trabajo Fin de Grado/Máster}
+
+\vspace{1cm}
+\large
+Título del Trabajo con Letras Capitales para Sustantivos y Adjetivos
+
+\vspace{1cm}
+\large
+\textbf{Autor :} Jesús José Moreno Pinto \\
+\textbf{Tutor :} Pedro de las Heras Quirós
+
+\end{center}
+
+\vspace{1cm}
+La defensa del presente Proyecto Fin de Carrera se realizó el día \qquad$\;\,$ de \qquad\qquad\qquad\qquad \newline de 20XX, siendo calificada por el siguiente tribunal:
+
+
+\vspace{0.5cm}
+\textbf{Presidente:}
+
+\vspace{1.2cm}
+\textbf{Secretario:}
+
+\vspace{1.2cm}
+\textbf{Vocal:}
+
+
+\vspace{1.2cm}
+y habiendo obtenido la siguiente calificación:
+
+\vspace{1cm}
+\textbf{Calificación:}
+
+
+\vspace{1cm}
+\begin{flushright}
+Fuenlabrada, a \qquad$\;\,$ de \qquad\qquad\qquad\qquad de 20XX
+\end{flushright}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Dedicatoria
+
+\chapter*{}
+\pagenumbering{Roman} % para comenzar la numeracion de paginas en numeros romanos
+\begin{flushright}
+\textit{Dedicado a \\
+mi familia / mi abuelo / mi abuela}
+\end{flushright}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Agradecimientos
+
+\chapter*{Agradecimientos}
+%\addcontentsline{toc}{chapter}{Agradecimientos} % si queremos que aparezca en el índice
+\markboth{AGRADECIMIENTOS}{AGRADECIMIENTOS} % encabezado 
+
+Aquí vienen los agradecimientos\ldots Aunque está bien acordarse de la pareja, no hay que olvidarse de dar las gracias a tu madre, que aunque a veces no lo parezca disfrutará tanto de tus logros como tú\ldots 
+Además, la pareja quizás no sea para siempre, pero tu madre sí.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ÍNDICES %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Las buenas noticias es que los índices se generan automáticamente.
+% Lo único que tienes que hacer es elegir cuáles quieren que se generen,
+% y comentar/descomentar esa instrucción de LaTeX.
+
+%%%% Índice de contenidos
+\tableofcontents 
+%%%% Índice de figuras
+%\cleardoublepage
+%\addcontentsline{toc}{chapter}{Lista de figuras} % para que aparezca en el indice de contenidos
+%\listoffigures % indice de figuras
+%%%% Índice de tablas
+%\cleardoublepage
+%\addcontentsline{toc}{chapter}{Lista de tablas} % para que aparezca en el indice de contenidos
+%\listoftables % indice de tablas
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% INTRODUCCIÓN %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\cleardoublepage
+\chapter{Resumen}
+\label{sec:intro} % etiqueta para poder referenciar luego en el texto con ~\ref{sec:intro}
+\pagenumbering{arabic} % para empezar la numeración de página con números
+
+Mediante este proyecto se ha implementado una aplicación web cuyo principal objetivo es la creación de puntos de encuentro con carácter deportivo, de manera que se pueda jugar un partido de tu deporte favorito en caso de no disponer de los conocidos necesarios para un día concreto. De esta manera se fomenta el establecimiento de nuevas amistades con el deporte como punto en común.\\
+
+La realización de esta aplicación ha buscado que la creación y unión de los usuarios a la partida fuera lo más rápido e intiutivo posible.
+Para dicha aplicación se han utilizado las siguientes tecnologías de desarrollo como Angular5, Angular Material, Visual Studio Code, HTML5, CSS3, nodeJS, expressJS, javascript, typescript, MongoDB , Maps JavaScript API, Geocoding API.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% OBJETIVOS %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Introducción} % título del capítulo (se muestra)
+\label{chap:objetivos} % identificador del capítulo (no se muestra, es para poder referenciarlo)
+
+El desarrollo del Trabajo Fin de Grado se centra en el ámbito deportivo y la utilización de herramientas web para facilitar su realización. A continuación se expondrá una pequeña introducción de conceptos básicos sobre el desarrollo web y las tecnologías utilizadas para la realización de dicha aplicación.
+
+\section{Desarrollo web} % título de sección (se muestra)
+\label{sec:objetivo-general} % identificador de sección (no se muestra, es para poder referenciarla)
+La vida actual gira entorno a la evolución tecnológica en la que nos encontramos sumergidos, en un periodo muy corto de tiempo hemos sufrido una gran evolución.\\
+
+Las tecnologías web se encuentran fuertemente arraigadas en nuestro día a día y con motivo de ello deben renovarse continuamente para facilitar el desarrollo de aplicaciones en el menor tiempo posible, facilitar su mantenimiento y mejorar su rendimiento.\\
+
+Debemos retroceder a 1991, año en el que se publicó la primera página web por Tim Berners-Lee. \\La web 1.0 se denomina así para definir todo lo creado anteriormente al fenómeno de la Web 2.0 y se trataban de páginas estáticas en HTML donde el papel del usuario era totalmente pasivo.\\
+
+La web 2.0 era de carácter social, al contrario que su predecesor, se basaba en usuarios activos y se produjo un gran auge de los blogs, redes sociales, webs creadas por usuarios, etc.\\
+
+Por último nos encontramos ante la Web 3.0 dada por el avance tecnológico hacia inteligencia artificial y de la web semántica, donde es primordial el diseño responsive para la adaptación a cualquier dispositivo.\\
+
+En el diseño web debemos tener en cuenta las herramientas a utilizar, diseño y la metodología de desarrollo utilizada, con el continuo desarrollo de las tecnologías se ha reducido la dificultad de implementación de las dichas web.
+
+
+\section{Tecnologías web}
+\label{sec:tecnologias-web}
+Son todas aquellas herramientas utilizadas en la creación de sitios web o aplicaciones online, podemos diferenciar entre librería, framework, API y lenguaje.
+
+
+\subsection{Lenguaje}
+Según wikipedia: \textit{ ``un lenguaje de programación\footnote{\url{https://es.wikipedia.org/wiki/Lenguaje_de_programacion}} es un lenguaje formal que proporciona una serie de instrucciones que permiten a un programador escribir secuencias de órdenes y algoritmos a modo de controlar el comportamiento físico y lógico de una computadora con el objetivo de que produzca diversas clases de datos. A todo este conjunto de órdenes y datos escritos mediante un lenguaje de programación se le conoce como programa."}\\
+
+Para el caso del desarrollo web podemos diferenciar entre lenguajes para el Front-End y Back-End, en el lado del cliente debemos tener en cuenta que el navegador compila e interpreta sólo archivos HTML, CSS y como lenguaje de lógica Javascript.\\ Existen lenguajes como Typescript, Coffesscript.. que deben ser compilados a Javascript para su uso por parte del navegador.
+
+\subsubsection{Typescript}
+Se trata de un lenguaje de programación de alto nivel orientado a objetos, como ya se ha comentado anteriormente se ``transpila'' en Javascript nativo, es un superset.\\
+
+Al contrario que Javascript, Typescript está realmente orientado a objetos, posee herramientas como la herencia o sobrecarga (resulta similar a Java). En el caso de esta aplicación su uso ha sido necesario puesto que Angular está hecho en Typescript.
+\subsubsection{Javascript}
+Como hemos comentado anteriormente es el lenguaje que interpretará el navegador, entrará en juego cada vez que la página tenga que hacer algo más que representar información estática. Es un lenguaje de programación orientado a objetos de tipado muy débil y dinámico.\\
+
+El ámbito de utilización del lenguaje no se reduce sólo al lado del cliente, también es utilizado en frameworks de la parte del servidor basados en NodeJS.
+\subsubsection{HTML5}
+Es la quinta revisión del lenguaje principal de la World Wide Web, el HTML. Podemos diferenciar entre 2 variantes de sintaxis para HTML, una básica que se sirve de HTML conocida como \textbf{HTML5} y otra variante conocida como \textbf{XHTML5} que se sirve como sintáxis XML.\\ Este lenguaje de marcado se encuentra regulado por el Consorcio \textbf{W3C}\footnote{\url{https://es.wikipedia.org/wiki/World_Wide_Web_Consortium}}.\\
+
+Algunas de las mejoras introducidas con el HTML5 son:
+\begin{itemize}
+	\item Ampliación del elemento \textbf{input} perimitiendo tipos de datos como range, email, url, search...
+	\item Introducción de elementos de audio y video para incrustar contenido multimedia.
+	\item Aparece el elemento \textbf{canvas} que permite la generación de gráficos y `dibujar' lo que se quiera dentro de él. Un ejemplo actual de su uso sería Google Maps.
+\end{itemize}
+
+Estas serían algunas de las mejoras introducidas por las cuales se reduce el uso de plugins por parte del desarrollador.
+\subsubsection{CSS3}
+el lenguaje encargado de darle el estilo al documento HTML o XML es el CSS. CSS3 es la tercera versión y algunas de las nuevas funcionalidades introducidas serían las esquinas redondeadas de los elementos, gradientes, transiciones o animaciones y nuevos diseños como multi-columnas, cajas flexibles o \textit{grids} (diseño de cuadrícula). 
+
+\subsection{Framework}
+\label{subsec:framworks}
+Por definición un \textbf{framework}\footnote{\url{https://es.wikipedia.org/wiki/Framework}}. es un conjunto estandarizado de conceptos, prácticas y criterios para enfocar un tipo de problemática particular que sirve como referencia, para enfrentar y resolver nuevos problemas de índole similar.\\
+
+Hoy en día existen multitud de frameworks para el desarrollo de aplicaciones web y es imprescindible conocer el entorno en el que se ejecuta cada uno de ellos, podemos diferenciar entre los orientados para cliente (Front-End), orientado a servidor (Back-End) o a ambos (Full-Stack).
+Actualmente se usan una gran cantidad de frameworks, para el desarrollo de esta aplicación se han utilizado: \textbf{Angular}\footnote{\url{https://angular.io}}, concretamente la v5, para la realización del Front-End y \textbf{ExpressJS}\footnote{\url{https://expressjs.com/es}} y \textbf{NodeJS}\footnote{\url{https://nodejs.org/es/}}  para el Back-End\footnote{\url{https://es.wikipedia.org/wiki/Front-end_y_back-end}} .
+
+\subsubsection{Angular}
+Se trata de un framework Front-End desarrollado en typescript, el objetivo es que el peso de la lógica y renderizado sea tarea del navegador y así liberar al servidor de trabajo.
+Mediante peticiones REST obtendremos la información necesaria para el correcto funcionamiento de nuestra aplicación.\\
+
+Fue creado por Google con la intención de mejorar su framework anterior (\textbf{AngularJS}), pese a ser la evolución de éste son incompatibles.\\
+
+Existe una gran cantidad de información en internet para su aprendizaje y al igual que su antecesor, mantiene una gran rivalidad con \textbf{React}\footnote{\url{https://reactjs.org/}}, que fue creado por Facebook.
+
+El lenguaje utilizado para el desarrollo de una aplicación Angular es typescript, 
+
+\subsubsection{NodeJS}
+Se trata de un entorno en tiempo de ejecución multiplataforma, de código abierto, para la capa del servidor (pero no limitándose a ello) basado en el lenguaje de programación ECMAScript, asíncrono, con I/O de datos en una arquitectura orientada a eventos y basado en el motor V8 de Google.
+
+\subsubsection{ExpressJS}
+Se trata de un framework Back-End de aplicaciones web Node.js mínima y flexible que proporciona un conjunto sólido de características para las aplicaciones web y móviles.
+Dispone de una robusta API que permite a los usuarios configurar las rutas para la interacción entre el Front-End y la base de datos. 
+
+\subsection{Librería}
+
+Una librería es un archivo o conjunto de archivos , en un lenguaje dado, utilizado para facilitar la programación del desarrollador.
+
+En el caso de esta aplicación podríamos destacar librerías utilizadas durante el desarrollo como:
+\subsubsection{Rxjs}
+Es una librería básica en la programación reactiva en la que se trabaja con flujos de datos de forma asíncrona, en el caso de Angular se trabaja con los .subscribe() y operadores que actúan sobre la respuesta, una vez es obtenida.\\
+Ofrecen una solución óptima para tareas asíncronas complejas.
+\subsubsection{Eslint}
+Una librería de gran ayuda que analiza el código desarrollado y encuentra problemas como podrían ser líneas de código que nunca se ejecutarán y variables que nunca se han utilizado entre otras muchas.
+Se utiliza para mantener una serie de reglas en la codificación que facilitarán su desarrollo y mantenimiento, sobre todo en el caso de que se desarrolle en equipo ya que se evita que los hábitos de cada uno dificulten el seguimiento del código (se mantiene cierta estructura común para todos).
+\subsubsection{Webpack}
+Se trata en un empaquetador de módulos para modernas aplicaciones Javascript. En el momento que webpack procesa tu aplicación, contruye un grafo de dependencias el cual mapea cada módulo que necesita la aplicación y genera 1 o más paquetes.
+\subsubsection{Angular Material}
+Esta librería está centrada en el diseño de componentes de Angular creada por Google, en ella podrás encontrar una gran cantidad de elementos para facilitar la creación y diseño de componentes y aplicaciones.\\
+Además se tratan de componentes que ya son responsive, esto quiere decir que se adaptarán a distintos terminales (móviles, tablets, portátiles y ordenadores de sobremesa).
+\subsection{API}
+
+La palabra API viene dada por \textbf{Application Programming Interface} (Interfaz de Programación de Aplicaciones), este concepto hace referencia a todos aquellos procesos, funciones y métodos que da una biblioteca de programación como capa de abstracción para que lo utilice otro programa.\\
+Gracias a las APIs podemos recurrir a la funcionalidad que dé una en concreto y así ahorrar el trabajo de desarrollarla de cero. en el caso de esta aplicación se han utilizado 2 APIs propedad de Google:
+\subsubsection{Geocoding API}\footnote{\url{https://developers.google.com/maps/documentation/geocoding/intro}}
+Es una API de Google capaz de convertir las direcciones en coordenadas geográficas, en el caso de caso de esta aplicación se ha utilizado esta funcionalidad y la inversa \textbf{Reverse geocoding}, que consiste en la obtención de direcciones a traves de las coordenadas..
+\subsubsection{Maps Javascript API}\footnote{\url{https://developers.google.com/maps/documentation/javascript/tutorial}}
+Se trata de una API de Google que permite la creación de mapas personalizados con tu propio contenido y mostrarlos en páginas web. Para el caso de uso, se han utilizado marcadores de posición personalizados (pelotas de deporte) y mediante el evento de doble click sobre el mapa se han obtenido las coordenadas de la posición del mapa para su posterior almacenamiento.\\
+Permite capturar multitud de eventos para realizar el tratamiento de ellos en función de la necesidad de la aplicación.\\
+
+Para el uso de las APIs de Google es necesario la creación de una key, en cada petición http deberá incluirse la key ya que sino no se tendrá acceso a la funcionalidad de las APIs utilizadas. Hace poco entró en vigor una nueva norma por la cual deberá dejarse registrado un método de pago, en caso de exceder el número de peticiones máximas por mes en cada API se procederá al cobro automático por cada uso fuera del servicio mínimo.  
+
+\subsection{Programación reactiva}
+Anteriormente se ha hecho uso de un término muy importante en la programación web de hoy en día, se trata de la \textbf{reactividad}.\\
+La programación reactiva es la programación con flujos de datos asíncronos, el típico evento de click en una página web es un flujo de datos que puedes observar y por el cual desencadenar una serie de eventos sobre el contenido de la página. Se pueden realizar multitud de acciones sobre los datos cómo filtrarlos, combinarlos con otros, crear nuevos a partir de ellos... \\
+
+Un flujo o stream es una secuencia de eventos ordenados en el tiempo de los que podemos diferenciar 3 tipos:
+\begin{itemize}
+	\item Valor.
+	\item Error.
+	\item Señal de completado. 
+\end{itemize}
+Estos eventos emitidos de forma asíncrona pueden ser capturados mediante la definición de funciones que serán ejecutadas cuando se emita un valor, funciones de error cuando se emita el error por un fallo y otra función cuando el 'completado' es emitido.
+La forma de enterarse de estas emisiones es mediante el concepto de subscripción, donde el 'observador' sería la función y el 'observado' sería el stream. 
+
+\section{Base de datos}
+La base de datos utilizada por la aplicación es MongoDB y la librería mediante la cual se generan los documentos y realizan las operaciones \textbf{CRUD}\footnote{\url{https://es.wikipedia.org/wiki/CRUD}} es \textbf{Mongoose}\footnote{\url{https://mongoosejs.com/docs/guide.html}}.
+\subsection{MongoDB}
+MongoDB es una base de datos NoSQL orientada a documentos de código abierto y gratuita; al contrario que las bases de datos relacionales, donde los datos se almacenan en filas de una tabla, estos datos quedan almacenados en documentos BSON.\\
+
+Los documentos no tienen una esquema fijo y su estructura básica está basada en 2 partes: clave, valor.
+Los tipos de datos que soporta son:
+\begin{multicols}{2}
+	\begin{itemize}
+		\item Null
+		\item Boolean
+		\item Number
+		\item String
+		\item Date
+		\item Expresiones regulares
+		\item Array
+		\item Documento embebido
+		\item ObjectId
+		\item Código javascript
+	\end{itemize}
+\end{multicols}
+Cada documento creado dispone de un \_id único que por defecto es de tipo ObjectId, en caso de no crearlo el desarrollador se crea uno por defecto. Otro concepto importante es el de \textbf{colección}, es un conjunto de documentos que pueden tener esquemas distintos.
+
+\subsection{Mongoose}
+Mongoose es un Object Document Mapper\footnote{\url{https://www.quora.com/What-is-Object-Document-Mapping}} (ODM), mediante el cual permite definir objetos con un esquema fuertemente tipado que es asignado a un documento MongoDB.\\
+Dispone de múltiples herramientas mediante las cuales puedes definir funciones de validación de datos personalizadas, indicar que un campo es requerido ó convertir strings a minúsculas o mayúsculas entre otras muchas.
+
+\section{Herramientas de trabajo en equipo}
+En el desarrollo de páginas y aplicaciones web es fundamental una buena organización, aquí entran en juego las metodolgías ágiles y herramientas para el trabajo en equipo. En busca de una reducción en el tiempo de desarrollo con el mejor resultado posible aparecieron las metodologías ágiles cuyas bases son:
+
+\begin{itemize}
+	\item La mayor prioridad es la satisfacción del cliente.
+	\item Entrega periódica de software.
+	\item Transmisión de la información preferiblemente cara a cara.
+	\item Capacidad de autorganización por parte del equipo.
+	\item Aceptar el cambio de requisitos durante su desarrollo.
+\end{itemize}
+
+Existen múltiples metodologías ágiles entre las que se pueden destacar \textbf{SCRUM}\footnote{\url{https://es.wikipedia.org/wiki/Scrum_(desarrollo_de_software)}} y \textbf{Extreme Programming (XP)}.\\
+
+La metodología ágil consiste en una serie de buenas prácticas para maximizar el rendimiento del equipo de desarrollo y como ayuda para ello se utilizan herramientas como \textbf{Github}, \textbf{Jira}, \textbf{Slack} y \textbf{Skype} entre otras.
+
+\subsection{Git y Github}
+
+Git es un software de control de versiones pensado para lograr la mayor eficiencia y confiabilidad del mantenimiento de versiones de aplicaciones. Crea una copia del proyecto en desarrollo en un repositorio y mediante commits se almacenan diversas versiones del mismo que se pueden recuperar posteriormente. Permite la creación de ramas (branches) de versiones que en el momento deseado pueden unirse al proyecto principal (master).\\
+A la hora de desarrollar en equipo esto es algo fundamental pues los miembros del equipo podrían realizar desarrollos en paralelo para posteriormente unirlo en el proyecto principal.\\
+
+Todo esto se realizaría mediante Github, es una plataforma de desarrollo colaborativo de software donde se almacenan proyectos públicos o privados (mediante pago) que utiliza el sistema de control de versiones Git.
+
+\subsection{Jira}
+Dentro de las fases durante el desarrollo del proyecto, la primera de todas sería el análisis y establecimiento de requisitos.\\
+Jira es una plataforma para la gestión y administración de proyectos que permite planear y realizar un seguimiento del proyecto, es ideal para equipos de trabajo que implementen estrategias de desarrollo Agile como SCRUM.\\
+
+Dentro de Jira existe un parámetro llamado \textbf{Incidencia-Issue} que puede representar tanto una tarea, un bug, un ticket de soporte, un feedback... que dispone de 3 atributos:
+\begin{itemize}
+	\item Prioridad: indica la importancia.
+	\item Estado: 'donde' está la incidencia respecto al flujo de trabajo.
+	\item Resolución: se cambia el estado respecto al tipo de resolución aplicada.
+\end{itemize}
+\subsection{Herramientas para la comunicación entre desarrolladores}
+Debido a la posibilidad de la división espacial de los miembros del equipo resultan primordiales las herramientas para el trabajo a distancia con capacidad para compartir archivos.
+\subsubsection{Slack}
+Se trata de una herramienta de colaboración dedicada a la comunicación de grupos de trabajo que permite el intercambio de ficheros e información. El trabajo tiene lugar en canales, se pueden crear canales a partir de equipos o proyectos y dispone de chat a través del cual se compartirán los archivos.\\
+Permite la conexión con aplicaciones externas que están siendo utilizadas durante el desarrollo como Github, quedando cada avance reflejado y notificado a todos los miembros del equipo.
+
+
+
+%\section{Planificación temporal}
+%\label{sec:planificacion-temporal}
+
+% mí me gusta que aquí pongáis una descripción de lo que os ha llevado realizar el trabajo.
+%Hay gente que añade un diagrama de GANTT.
+%Lo importante es que quede claro cuánto tiempo llevas (tiempo natural, p.ej., 6 meses) y a qué nivel de esfuerzo (p.ej., principalmente los fines de semana).%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ESTADO DEL ARTE %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\cleardoublepage
+\chapter{Objetivos y metodología}
+En este capítulo se expone el `problema' que ha motivado la realización de este proyecto, los objetivos y requisitos marcados previamente a su realización y los que se han cumplido tras la finalización de este proyecto.
+
+%Puedes citar libros, como el de Bonabeau et al. sobre procesos estigmérgicos~\cite{bonabeau:_swarm}. % Nota que el ~ añade un espacio en blanco, pero no deja que exista un salto de línea. Imprescindible ponerlo para las citas.
+\section{Motivación} 
+\label{sec:seccion1}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DISEÑO E IMPLEMENTACIÓN %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\cleardoublepage
+\chapter{Diseño e implementación}
+
+Aquí viene todo lo que has hecho tú (tecnológicamente). 
+Puedes entrar hasta el detalle. 
+Es la parte más importante de la memoria, porque describe lo que has hecho tú.
+Eso sí, normalmente aconsejo no poner código, sino diagramas.
+
+\section{Arquitectura general} 
+\label{sec:arquitectura}
+
+Si tu proyecto es un software, siempre es bueno poner la arquitectura (que es cómo se estructura tu programa a ``vista de pájaro'').
+
+Por ejemplo, puedes verlo en la figura~\ref{fig:arquitectura}.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=9cm, keepaspectratio]{img/arquitectura}
+  \caption{Estructura del parser básico}
+  \label{fig:arquitectura}
+\end{figure}
+
+Si utilizas una base de datos, no te olvides de incluir también un diagrama de entidad-relación.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% RESULTADOS %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\cleardoublepage
+\chapter{Resultados}
+
+En este capítulo se incluyen los resultados de tu trabajo fin de grado.
+
+Si es una herramienta de análisis lo que has realizado, aquí puedes poner ejemplos de haberla utilizado para que se vea su utilidad.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CONCLUSIONES %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\cleardoublepage
+\chapter{Conclusiones}
+\label{chap:conclusiones}
+
+
+\section{Consecución de objetivos}
+\label{sec:consecucion-objetivos}
+
+Esta sección es la sección espejo de las dos primeras del capítulo de objetivos, donde se planteaba el objetivo general y se elaboraban los específicos.
+
+Es aquí donde hay que debatir qué se ha conseguido y qué no. 
+Cuando algo no se ha conseguido, se ha de justificar, en términos de qué problemas se han encontrado y qué medidas se han tomado para mitigar esos problemas.
+
+
+\section{Aplicación de lo aprendido}
+\label{sec:aplicacion}
+
+Aquí viene lo que has aprendido durante el Grado/Máster y que has aplicado en el TFG/TFM. Una buena idea es poner las asignaturas más relacionadas y comentar en un párrafo los conocimientos y habilidades puestos en práctica.
+
+\begin{enumerate}
+  \item a
+  \item b
+\end{enumerate}
+
+
+\section{Lecciones aprendidas}
+\label{sec:lecciones_aprendidas}
+
+Aquí viene lo que has aprendido en el Trabajo Fin de Grado/Máster.
+
+\begin{enumerate}
+  \item a
+  \item b
+\end{enumerate}
+
+
+\section{Trabajos futuros}
+\label{sec:trabajos_futuros}
+
+Ningún software se termina, así que aquí vienen ideas y funcionalidades que estaría bien tener implementadas en el futuro.
+
+Es un apartado que sirve para dar ideas de cara a futuros TFGs/TFMs.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% APÉNDICE(S) %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\cleardoublepage
+\appendix
+\chapter{Manual de usuario}
+\label{app:manual}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BIBLIOGRAFIA %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\cleardoublepage
+
+% Las siguientes dos instrucciones es todo lo que necesitas
+% para incluir las citas en la memoria
+\bibliographystyle{abbrv}
+\bibliography{memoria}  % memoria.bib es el nombre del fichero que contiene
+% las referencias bibliográficas. Abre ese fichero y mira el formato que tiene,
+% que se conoce como BibTeX. Hay muchos sitios que exportan referencias en
+% formato BibTeX. Prueba a buscar en http://scholar.google.com por referencias
+% y verás que lo puedes hacer de manera sencilla.
+% Más información: 
+% http://texblog.org/2014/04/22/using-google-scholar-to-download-bibtex-citations/
+
+\end{document}
