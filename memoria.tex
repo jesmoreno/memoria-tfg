@@ -31,6 +31,7 @@
 \usepackage[nottoc, notlot, notlof, notindex]{tocbibind} %% Opciones de índice
 \usepackage{latexsym}  %% Logo LaTeX
 \usepackage{multicol}
+\usepackage{hyperref}
 
 \title{Memoria del Proyecto}
 \author{Nombre del autor}
@@ -425,13 +426,14 @@ A partir de la motivación debemos plantearnos cuáles son las necesidades básicas
 
 Estos serían los requisitos que la aplicación debe cumplir:
 \begin{itemize}
-	\item Registro de usuario
+	\item \textbf{Registro de usuario}
 	\begin{enumerate}
 		\item Debe existir una interfaz para la creación de un usuario, para el posterior uso de la aplicación.
 		\item Todo el contenido de la aplicación será accesible tras el previo logeado, el contenido no será mostrado sin haberse registrado previamente.
-		\item 
+		\item El forulario de registro consistirá en un nombre de usuario, contraseña, correo, deporte favorito y datos de la localización del usuario.
+		\item El acceso será mediante usuario y contraseña, el correo será utilizado para notificaciones. 
 	\end{enumerate}
-	\item Experiencia de usuario
+	\item \textbf{Experiencia de usuario}
 	\begin{enumerate}
 		\item El usuario debe ser capaz de crear un partida en el menor tiempo posible.
 		\item Tras logearse, el usuario debe ver una lista de partidas adaptadas a sus datos (localización y deporte favorito).
@@ -442,20 +444,43 @@ Estos serían los requisitos que la aplicación debe cumplir:
 		\item El host de la partida podrá añadir a amigos agregados previamente. 
 		\item Los usuarios inscritos en una partida deben recibir notificaciones de los que se inscriban posteriormente.
 		\item Posibilidad de agregar y eliminar usuarios de una lista de amigos.
+		
 	\end{enumerate}
-	\item Servicios
+	\item \textbf{Servicios}
 	\begin{enumerate}
-		\item 
+		\item Existirán notificaciones de inscripción de usuarios en partidas en las que uno esté previamente inscrito.
+		\item Notificaciones de eliminación de partida para los jugadores inscritos.
+		\item Existirá una interfaz a través de la cual visualizar las condiciones atmosféricas, dichos datos serán consultados mediante una API y podrán consultarse por localización específica mediante un buscador.
+		\item Mediante la elección de deporte favorito durante el registro, se dotará al usuario de un spinner personalizado que se mostrará durante la carga de datos de la aplicación.
 	\end{enumerate}
-	\item Contenido principal
+	\item \textbf{Contenido principal}
 	\begin{enumerate}
-		\item 
+		\item Un usuario podrá consultar todas las partidas disponibles en una localización mediante un mapa donde se situarán todas las disponibles filtradas por deporte y las partidas en las que ya esté inscrito.
+		\item Mediante el doble click sobre el mapa se rellenará el campo de localización en el formulario. Si el usuario desea coger su posición actual, bastará con pinchar sobre el botón \textbf{`Coger posición'} que se encontrará en el formulario.
+		\item Las partidas tendrán un límite de inscripción de 2 jugadores como mínimo y 30 como máximo.
+		\item La partida podrá ser eliminada únicamente por el creador.
+		\item Al hacer click sobre un icono de partida sobre el mapa, se mostrará la información de la partida: localización y jugadores inscritos.
+	\end{enumerate}	
+	\item \textbf{Perfil}
+	\begin{enumerate}
+		\item El usuario podrá editar su información de perfil: nombre de usuario, correo,deporte favorito, ciudad y código postal.
+		\item El usuario podrá añadir y eliminar de la lista de amigos.
 	\end{enumerate}	
 \end{itemize}
 
 
 
+\section{Metodología y plan de trabajo} 
+\label{sec:seccion4}
 
+\subsection{Metodología}
+Durante el desarrollo de este TFG se ha seguido una metodología de realimentación basada en SCRUM. Cada parte de la aplicación final se ha obtenido a partir de prototipos previos hasta obtener la funcionalidad óptima y la mayor sencillez posible durante el uso del conjunto de la aplicación.\\
+Diferenciamos entre distintas etapas: obtención de requisitos, aprendizaje de las tecnologías, desarrollo, fase de pruebas y evaluación del resultado final.
+\subsection{Plan de trabajo}
+En el plan de trabajo podemos diferenciar las siguientes fases:
+\begin{itemize}
+	\item \textbf{Fase 1 - Establecimiento de requisitos y búsqueda y aprendizaje de las herramientas:}
+\end{itemize}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
