@@ -427,13 +427,21 @@ Estos serían los requisitos que la aplicación debe cumplir:
 \begin{itemize}
 	\item Registro de usuario
 	\begin{enumerate}
+		\item Debe existir una interfaz para la creación de un usuario, para el posterior uso de la aplicación.
+		\item Todo el contenido de la aplicación será accesible tras el previo logeado, el contenido no será mostrado sin haberse registrado previamente.
 		\item 
 	\end{enumerate}
 	\item Experiencia de usuario
 	\begin{enumerate}
 		\item El usuario debe ser capaz de crear un partida en el menor tiempo posible.
-		\item  
-		
+		\item Tras logearse, el usuario debe ver una lista de partidas adaptadas a sus datos (localización y deporte favorito).
+		\item El usuario debe poder filtrar por deporte y localización, además de distinguir de partidas en las que está inscrito y las que aún no.
+		\item Ante la posibilidad de que se juegue al aire libre, debemos dotar al usuario de la posibilidad de consultar las condiciones atmosféricas durante la semana.
+		\item Cada usuario debe poder crear una partida rellenando un formulario.
+		\item El host o creador de la partida será el único con capacidad para eliminar la partida.
+		\item El host de la partida podrá añadir a amigos agregados previamente. 
+		\item Los usuarios inscritos en una partida deben recibir notificaciones de los que se inscriban posteriormente.
+		\item Posibilidad de agregar y eliminar usuarios de una lista de amigos.
 	\end{enumerate}
 	\item Servicios
 	\begin{enumerate}
