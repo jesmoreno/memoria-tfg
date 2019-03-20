@@ -479,7 +479,10 @@ Diferenciamos entre distintas etapas: obtención de requisitos, aprendizaje de la
 \subsection{Plan de trabajo}
 En el plan de trabajo podemos diferenciar las siguientes fases:
 \begin{itemize}
-	\item \textbf{Fase 1 - Establecimiento de requisitos y búsqueda y aprendizaje de las herramientas:}
+	\item \textbf{Fase 1 - Establecimiento de requisitos y búsqueda y aprendizaje de las herramientas:} en esta fase inicial se han exraido los requisitos iniciales de la aplicación, así como las herramientas necesarias para su desarrollo y su aprendizaje.
+	\item \textbf{Fase 2 - Desarrollo de prototipos:} es la fase más extensa en cuanto a tiempo, durante el desarrollo de cada parte de la aplicación se ha desarrollado un prototipo como base para su posterior mejora.\\
+	La tareas realizadas durante esta fase se agrupan en: establecimiento de requisitos, diseño de base de datos y estructura de los documentos, diseño de interfaces de usuario y servicios requeridos, desarrollo de las interfaces y y servicios y por último pruebas de funcionalidad.
+	\item \textbf{Fase 3 - Despliegue y pruebas:} en esta fase final se ha procedido al despliegue de la aplicación y pruebas por parte de usuarios reales a toda la funcionalidad de la aplicación para su posterior mejora ,en caso de ser necesaria.
 \end{itemize}
 
 
@@ -491,26 +494,22 @@ En el plan de trabajo podemos diferenciar las siguientes fases:
 \cleardoublepage
 \chapter{Diseño e implementación}
 
-Aquí viene todo lo que has hecho tú (tecnológicamente). 
-Puedes entrar hasta el detalle. 
-Es la parte más importante de la memoria, porque describe lo que has hecho tú.
-Eso sí, normalmente aconsejo no poner código, sino diagramas.
+Durante este capítulo se va a describir en profundidad los procesos de diseño e implementación del proyecto. En primer lugar se explica la arquitectura utilizada, las herramientas utilizadas durante el desarrollo y por último su despliegue.\\ 
 
-\section{Arquitectura general} 
+\section{Arquitectura utilzada} 
 \label{sec:arquitectura}
 
-Si tu proyecto es un software, siempre es bueno poner la arquitectura (que es cómo se estructura tu programa a ``vista de pájaro'').
-
-Por ejemplo, puedes verlo en la figura~\ref{fig:arquitectura}.
+El modelo de arquitectura elegido ha sido la denominada \textbf{MEAN Stack} (figura ~\ref{fig:arquitectura}), cuyo acrónimo hace referencia a las arquitecturas desarrolladas con MongoDB, ExpressJS, Angular y NodeJS.\\
+Cada tecnología
 
 \begin{figure}
   \centering
-  \includegraphics[width=9cm, keepaspectratio]{img/arquitectura}
-  \caption{Estructura del parser básico}
+  \includegraphics[width=9cm, keepaspectratio]{img/mean}
+  \caption{Arquitectura MEAN}
   \label{fig:arquitectura}
 \end{figure}
 
-Si utilizas una base de datos, no te olvides de incluir también un diagrama de entidad-relación.
+%Si utilizas una base de datos, no te olvides de incluir también un diagrama de entidad-relación.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
