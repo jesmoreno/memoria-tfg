@@ -479,7 +479,7 @@ Diferenciamos entre distintas etapas: obtención de requisitos, aprendizaje de la
 \subsection{Plan de trabajo}
 En el plan de trabajo podemos diferenciar las siguientes fases:
 \begin{itemize}
-	\item \textbf{Fase 1 - Establecimiento de requisitos y búsqueda y aprendizaje de las herramientas:} en esta fase inicial se han exraido los requisitos iniciales de la aplicación, así como las herramientas necesarias para su desarrollo y su aprendizaje.
+	\item \textbf{Fase 1 - Establecimiento de requisitos y búsqueda y aprendizaje de las herramientas:} en esta fase inicial se han extraído los requisitos iniciales de la aplicación, así como las herramientas necesarias para su desarrollo y su aprendizaje.
 	\item \textbf{Fase 2 - Desarrollo de prototipos:} es la fase más extensa en cuanto a tiempo, durante el desarrollo de cada parte de la aplicación se ha desarrollado un prototipo como base para su posterior mejora.\\
 	La tareas realizadas durante esta fase se agrupan en: establecimiento de requisitos, diseño de base de datos y estructura de los documentos, diseño de interfaces de usuario y servicios requeridos, desarrollo de las interfaces y y servicios y por último pruebas de funcionalidad.
 	\item \textbf{Fase 3 - Despliegue y pruebas:} en esta fase final se ha procedido al despliegue de la aplicación y pruebas por parte de usuarios reales a toda la funcionalidad de la aplicación para su posterior mejora ,en caso de ser necesaria.
@@ -496,18 +496,35 @@ En el plan de trabajo podemos diferenciar las siguientes fases:
 
 Durante este capítulo se va a describir en profundidad los procesos de diseño e implementación del proyecto. En primer lugar se explica la arquitectura utilizada, las herramientas utilizadas durante el desarrollo y por último su despliegue.\\ 
 
-\section{Arquitectura utilzada} 
+\section{Arquitectura utilizada} 
 \label{sec:arquitectura}
 
 El modelo de arquitectura elegido ha sido la denominada \textbf{MEAN Stack} (figura ~\ref{fig:arquitectura}), cuyo acrónimo hace referencia a las arquitecturas desarrolladas con MongoDB, ExpressJS, Angular y NodeJS.\\
-Cada tecnología
+\begin{itemize}
+	\item MongoDB: base de datos \underline{NoSQL} donde se almacenará la información.
+	\item NodeJS: Permite ejecutar javascript en el lado del servidor.
+	\item ExpressJS: Framework Javascript del lado del servidor.
+	\item Angular: Framework Javascript del lado del cliente.
+\end{itemize}
 
-\begin{figure}
+\begin{figure}[t]
   \centering
   \includegraphics[width=9cm, keepaspectratio]{img/mean}
   \caption{Arquitectura MEAN}
   \label{fig:arquitectura}
 \end{figure}
+
+Estas 4 tecnologías nos permitirán crear aplicaciones escalables y en tiempo real.
+Dicho modelo de arquitectura se correspondería con el patrón \textbf{MVVM} (figura ~\ref{fig:mvvm}), en el cual cada vista dispone de su propia lógica y existe un sistema de data-binding entre las plantillas.\\
+
+\begin{figure}[b]
+	\centering
+	\includegraphics[width=11cm, keepaspectratio]{img/mvvm}
+	\caption{MVVM}
+	\label{fig:mvvm}
+\end{figure}
+
+
 
 %Si utilizas una base de datos, no te olvides de incluir también un diagrama de entidad-relación.
 
@@ -533,45 +550,89 @@ Si es una herramienta de análisis lo que has realizado, aquí puedes poner ejempl
 \cleardoublepage
 \chapter{Conclusiones}
 \label{chap:conclusiones}
-
+Anteriormente se han expuesto temas como la descripción del problema y motivación para el desarrollo del proyecto y el desarrollo de la solución y análisis del comportamiento en un entorno real. En este capítulo final se recogen las conclusiones del trabajo realizado, así como posibles mejoras y trabajos futuros.
 
 \section{Consecución de objetivos}
 \label{sec:consecucion-objetivos}
 
-Esta sección es la sección espejo de las dos primeras del capítulo de objetivos, donde se planteaba el objetivo general y se elaboraban los específicos.
+Con la prueba en entorno real de la aplicación y el análisis de los resultados obtenidos se concluye que las necesidades básicas que motivaron el desarrollo del proyecto han sido satisfechas.\\
 
-Es aquí donde hay que debatir qué se ha conseguido y qué no. 
-Cuando algo no se ha conseguido, se ha de justificar, en términos de qué problemas se han encontrado y qué medidas se han tomado para mitigar esos problemas.
+Mediante esta herramienta se ha alcanzado el objetivo principal que era facilitar el desarrollo de tu actividad deportiva favorita (dentro de las 4 opciones disponibles), en la cual era necesaria la presencia de más personas.
+
+Dicho objetivo se ha cumplido mediante algo tan simple como la publicación de un punto de encuentro con una fecha determinada y dando la posibilidad de que se una tanta gente como quiera, en principio existe un límite de personas establecido por el creador de la partida aunque siempre existirá la posibilidad de ir aún no aparecer como uno de los posibles asistentes.\\
+
+Se ha tratado de que la presentación de datos de la aplicación y navegación fueran lo más intuitivos y agradable a la vista posibles así como que llevará el menos tiempo posible la creación de partidas.\\
+
+Más allá de los objetivos cumplidos por dicha aplicación, este proyecto ha cumplido otros como la utilización de tecnologías actuales con las que nunca había trabajado y el enfrentarme a las diversas partes que compone el desarrollo de un proyecto desde cero.\\
+
+Se puede concluir que los objetivos marcados han sido cumplidos con éxito.
 
 
 \section{Aplicación de lo aprendido}
 \label{sec:aplicacion}
 
-Aquí viene lo que has aprendido durante el Grado/Máster y que has aplicado en el TFG/TFM. Una buena idea es poner las asignaturas más relacionadas y comentar en un párrafo los conocimientos y habilidades puestos en práctica.
+Durante el grado he cursado una gran cantidad de asignaturas de programación, cada cuál me ha aportado habilidades muy útiles para el desarrollo de este proyecto.\\
+Entre todas ellas puedo destacar 3 como las mas importantes ya que eran específicas del desarrollo web.
 
+\begin{itemize}
+  \item Servicios y Aplicaciones Telemáticas.
+  \item Desarrollo de Aplicaciones Telemáticas.
+  \item Ingenería de Sistemas de la Información.
+\end{itemize}
+
+La primera asignatura (SAT), se centraba en el aprendizaje de la parte \textbf{BACK} cuya práctica final consistió en la realización de una práctica basada en el framework \textit{DJANGO}\footnote{\url{https://www.djangoproject.com/start/}} y la base de datos \textbf{SQLite}.\\
+A nivel de diseño FRONT fue muy básico ya que el objetivo fue centrarnos en el tratamiento de datos, fue una introducción al html y css.\\
+
+La segunda de ellas (DAT) se centró en la parte FRONT, entre las tecnologías impartidas estaban \textbf{jquery, HTML5 y CSS3}. Además de la utilización de una librería de diseño web como es \textit{Bootstrap}\footnote{\url{https://getbootstrap.com/docs/4.3/getting-started/introduction/}}.\\
+
+La última de ellas (ISI) fue la más completa de ellas, se pusieron en práctica todos los conocimientos adquiridos mediante la realización de un proyecto final el cual se trataba de una plataforma web de minijuegos.
+Se dividió el proyecto en 3 partes:
 \begin{enumerate}
-  \item a
-  \item b
+	\item Plataforma de acceso.
+	\item Lógica del minijuego.
+	\item Interfaz de usuario del juego (IU).
 \end{enumerate}
 
+Durante la asignatura se estudiaron diversas tecnologías como MeteorJS, NodeJS, MongoDB y javascript como lenguaje.
+En mi caso tuve que realizar la IU mediante Canvas, por lo que sobre todo desarrolle en javascript.\\
+
+El conjunto de todas las asignaturas y tecnologías empleadas me han servido como base sólida para el aprendizaje de otras más actuales con las que he realizado esta práctica final. Sin el aprendizaje de HTML, CSS, javascript y jquery la realización de una aplicación en Angular habría sido prácticamente imposible.\\
+
+El haber aprendido java durante la carrera también ha facilitado el aprendizaje de typescript ya que tienen una estructura similar en la declaración de clases.
 
 \section{Lecciones aprendidas}
 \label{sec:lecciones_aprendidas}
 
-Aquí viene lo que has aprendido en el Trabajo Fin de Grado/Máster.
+Con el desarrollo del proyecto he podido desarrollar capacidades hasta entonces explotadas en menor medida, tanto en mi época como estudiante así como durante mi experiencia como profesional en el sector de las aplicaciones web.\\
 
-\begin{enumerate}
-  \item a
-  \item b
-\end{enumerate}
+En resumen podría enumerar la siguientes:
+
+\begin{itemize}
+  \item Establecimiento de requisitos del proyecto.
+  \item Elección de tecnologías a utilizar en función de los objetivos.
+  \item Capacidad de autonomía para el aprendizaje de nuevas herramientas de desarrollo.
+\end{itemize}
 
 
 \section{Trabajos futuros}
 \label{sec:trabajos_futuros}
 
-Ningún software se termina, así que aquí vienen ideas y funcionalidades que estaría bien tener implementadas en el futuro.
+A pesar de haber cumplido los objetivos básicos de lo que se pretendía con la mayor sencillez posible, podrían añadirse mejoras dotando de mayor robustez a la aplicación como:
+\begin{enumerate}
+	\item Petición previa al agregar amigos.
+	\item Inclusión de más deportes.
+	\item Notificación en la aplicación en lugar de email.
+	\item Recuperación de contraseña.
+\end{enumerate}
 
-Es un apartado que sirve para dar ideas de cara a futuros TFGs/TFMs.
+Otro tipo de mejoras posibles serían las relacionadas con la ampliación de contenido y usabilidad de la aplicación:
+
+\begin{enumerate}
+	\item Creación de ligas.
+	\item Publicación de estadísticas de los jugadores.
+\end{enumerate}
+
+	 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
