@@ -497,9 +497,10 @@ En el plan de trabajo podemos diferenciar las siguientes fases:
 Durante este capítulo se va a describir en profundidad los procesos de diseño e implementación del proyecto. En primer lugar se explica la arquitectura utilizada, las herramientas utilizadas durante el desarrollo y por último su despliegue.\\ 
 
 \section{Arquitectura utilizada} 
-\label{sec:arquitectura}
+\label{sec:sec1}
 
 El modelo de arquitectura elegido ha sido la denominada \textbf{MEAN Stack} (figura ~\ref{fig:arquitectura}), cuyo acrónimo hace referencia a las arquitecturas desarrolladas con MongoDB, ExpressJS, Angular y NodeJS.\\
+
 \begin{itemize}
 	\item MongoDB: base de datos \underline{NoSQL} donde se almacenará la información.
 	\item NodeJS: Permite ejecutar javascript en el lado del servidor.
@@ -507,26 +508,48 @@ El modelo de arquitectura elegido ha sido la denominada \textbf{MEAN Stack} (fig
 	\item Angular: Framework Javascript del lado del cliente.
 \end{itemize}
 
-\begin{figure}[t]
+\begin{figure}[H]
   \centering
   \includegraphics[width=9cm, keepaspectratio]{img/mean}
   \caption{Arquitectura MEAN}
   \label{fig:arquitectura}
+  \centering
+  \includegraphics[width=11cm, keepaspectratio]{img/mvvm}
+  \caption{MVVM}
+  \label{fig:mvvm}
 \end{figure}
 
 Estas 4 tecnologías nos permitirán crear aplicaciones escalables y en tiempo real.
 Dicho modelo de arquitectura se correspondería con el patrón \textbf{MVVM} (figura ~\ref{fig:mvvm}), en el cual cada vista dispone de su propia lógica y existe un sistema de data-binding entre las plantillas.\\
 
-\begin{figure}[b]
-	\centering
-	\includegraphics[width=11cm, keepaspectratio]{img/mvvm}
-	\caption{MVVM}
-	\label{fig:mvvm}
-\end{figure}
+\section{Búsqueda de herramientas} 
+\label{sec:sec2}
 
+A partir de los requisitos establecidos previamente, necesitamos encontrar herramientas con las que construir una aplicación con sistema de geolocalización para el usuario y un mapa donde situar las partidas, consulta del tiempo atmosférico y con una interfaz de usuario (IU) agradable a la vista.\\
 
+\textsl{\textbf{Sistema de geolocalización}}\\
 
+Para la geolocalización existen numerosas APIs como la propia de HTML5 o la de Google. Para esta aplicación se han utilizado ambas, en el caso de querer geolocalizar la posición actual del usuario se utiliza la API de HTML5 a la que previamente hay que dar permisos en el navegador y en el caso de introducir una dirección de forma manual en el formulario de la creación de partida o pulsando 2 veces sobre el mapa se usa la de \textbf{Google}\footnote{\url{https://developers.google.com/maps/documentation/geolocation/intro?hl=es-419}}.\\
+
+\textsl{\textbf{Mapa}}\\
+
+Existen APIs de mapas de código abierto como \textbf{LeafletJS}\footnote{\url{https://leafletjs.com/}} , para nuestro caso he optado por la de \textbf{Google}\footnote{\url{https://developers.google.com/maps/documentation/javascript/tutorial?hl=es}}. En la funcionalidad de esta aplicación no aportará gran diferencia en su uso, sin embargo la opción del Street View nos permitirá ver previamente a la quedada deportiva donde se sitúa la pista, muy útil en caso de no conocer el sitio.\\
+
+\textsl{\textbf{Consulta tiempo atmosférico}}\\
+
+Al igual que para la geolocalización existen diversas APIs , tanto de código abierto como de pago, que se pueden utilizar.\\
+Para esta aplicación se ha utilizado la API de \textbf{Openweathermap}\footnote{\url{https://openweathermap.org/}}, pese a ser de código abierto cierta funcionalidad está restringida a pago. En nuestro caso mostraremos la información del tiempo de los próximos 5 días de la ciudad con la que se registró el usuario y mediante un buscador podrá solicitar la información de la que quiera.\\
+\\
+
+\textsl{\textbf{IU}}\\
+
+Como uno de los requisitos fundamentales se ha fijado que la aplicación debe ser atractiva al usuario y eficiente en cuanto a que el tiempo de creación de las partidas debe ser el mínimo y lo más intuitivo posible.
+Para la maquetación se ha utilizado la tecnología \textbf{Flexbox} y para ciertos componentes se han usado los de angular material.\\
+Gracias a Flexbox la aplicación se adaptará al dispositivo en el que esté siendo utilizada, readaptando las plantillas en función del tamaño disponible. 
 %Si utilizas una base de datos, no te olvides de incluir también un diagrama de entidad-relación.
+
+\section{Entorno de desarrollo} 
+\label{sec:sec3}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
