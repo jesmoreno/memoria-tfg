@@ -17,7 +17,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[a4paper, 12pt]{book}
+\documentclass[a4paper, 12pt, onecolumn, openany]{book}
 %\usepackage[T1]{fontenc}
 
 \usepackage[a4paper, left=2.5cm, right=2.5cm, top=3cm, bottom=3cm]{geometry}
@@ -550,6 +550,58 @@ Gracias a Flexbox la aplicación se adaptará al dispositivo en el que esté siendo
 
 \section{Entorno de desarrollo} 
 \label{sec:sec3}
+Tras buscar la herramientas necesarias para el desarrollo empezamos a `montar' el entorno de la aplicación, utilizaremos el IDE \textbf{Visual Studio Code}. Nos dotará de herramientas para el desarrollo como una consola de comandos, pluggins que facilitarán el desarrollo del typescript (como es TSLint\footnote{\url{https://palantir.github.io/tslint/}}) e integración de sistemas de control de versiones como es Git.
+
+\subsection{Creación de la aplicación}
+
+En primer lugar deberemos tener instalado NodeJS, el cual será el entorno de ejecución de nuestra aplicación, además de MongoDB.
+
+Una vez hayamos instalado NodeJS deberemos instalar el intérprete de comandos de Angular (CLI), lo que nos facilitará en gran medida la creación de componentes para la parte de FRONT.\\
+Mediante el comando: \textit{ng new xxx} creamos toda la estructura del proyecto angular, dispondremos de comandos como: \textit{ng generate service  name}, \textit{ng generate class name}, \textit{ng generate directive name}... para la creación de componentes, servicios, clases y todo aquello que necesitemos.
+
+En todo proyecto NodeJS disponemos de un archivo llamado package.json en el cual se definen propiedades del proyecto como son:
+
+\begin{itemize}
+	\item Nombre de tu proyecto.
+	\item Versión.
+	\item Dependencias
+	\item Repositorio
+	\item Autores
+	\item Licencia
+\end{itemize}
+
+entre otros muchos. Dentro de la propiedad de dependencias incluiremos todas aquellas necesarias para nuestra aplicación que no haya metido por defecto el Angular CLI.\\
+Para el uso de los mapas y angular material incluiremos la dependencia mediante los siguientes comandos:\\
+
+
+\begin{enumerate}
+	\item npm install - -save @agm/core
+	\item npm install - -save @angular/material @angular/cdk
+	\item npm install - -save @angular/animations
+\end{enumerate}
+
+Mediante el flag - -save dejaremos guardada esa dependencia en el package.json, de modo que ejecutando sobre la carpeta raíz del proyecto npm install se intalarán todas las dependencias para la ejecución del proyecto Angular. Todas las dependencias quedan en una carpeta llamada node\_modules.\\
+
+Con esto hemos acabado de iniciar la parte FRONT, a continuación vamos con el BACK:\\
+
+Mediante el comando npm init y tras completar una serie de preguntas para inicializar el package.json con ciertos parámetros (nombre proyecto, autor...), incluiremos las siguientes dependencias:
+\begin{enumerate}
+	\item \textbf{express}:  dependencia necesaria para la creación de un servidor web expressJS.
+	\item \textbf{body-parser}: analiza el body de la petición y lo deja accesible a través del objeto req.body.
+	\item \textbf{path}: módulo para construir el path  deseado y apuntar a los archivos generados por angular en la carpeta dist tras compilarlo.
+	\item \textbf{express-jwt}: middleware encargado de validar JsonWebTokens enviados en las peticiones.
+	\item \textbf{http}: módulo para crear el servidor y recibir las peticiones.
+	\item \textbf{jsonwebtoken}: módulo encargado de la creación del JsonWebTokens tras logearse con éxito.
+	\item \textbf{mongoose}: librería para interactuar con MongoDB.
+	\item \textbf{nodemailer}: 	módulo que permite enviar correos electrónicos, necesario para las notificaciones.
+\end{enumerate}
+
+Con la instalación de todos estos módulos ya tendriamos listo el BACK con todos los elementos necesarios para recibir las peticiones y actuar en función de cada una.
+
+\section{Diseño de las páginas}
+
+\subsection{Registro y Login}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
