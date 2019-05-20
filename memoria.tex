@@ -613,8 +613,41 @@ Esto lo hará con la ayuda del módulo \textit{express-jwt}, mediante el cual el s
 
 \textsl{\textbf{Header}}\\
 
-Como se definió anteriormente en los requisitos la página debe ser responsive, por lo que se adaptará a cualquier tamaño de pantalla.
+Como se definió anteriormente en los requisitos la página debe ser responsive, por lo que se adaptará a cualquier tamaño de pantalla. 
 
+Dispondrá de 4 botones y cada uno de ellos cargará los componentes correspondientes a su página, existirá un quinto botón situado a la derecha del todo del header encargado de cerrar la sesión.
+
+Al reducirse el tamaño de la pantalla se distribuirán todos los botones de forma que entren todos en el header, aumentando su height si es necesario.
+
+\subsection{Registro de usuarios}
+
+Para el registro de los usuarios definiremos en el archivo app-routing.module el path \textit{registry} y definiremos la carga del componente correspondiente a ese estado. (figura ~\ref{fig:registry})
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=13cm, keepaspectratio]{img/registry}
+	\caption{Estado registro}
+	\label{fig:registry}
+\end{figure}
+
+El componente estará compuesto por un formualrio en el que se rellenarán los siguientes campos:
+
+\begin{itemize}
+		\item \textbf{Nombre de usuario}.
+		\item \textbf{Email}: para el envío de notificaciones.
+		\item \textbf{Contraseña y confirmación}.
+		\item \textbf{Deporte favorito}: en función del elegido tendrá un spinner diferente y cargará por defecto partidas cercanas de ese deporte.
+		\item \textbf{Ciudad}: para la carga de partidas e información del tiempo.
+		\item \textbf{Código postal}: para la carga de partidas e información del tiempo.
+\end{itemize}
+	
+El formulario dispondrá de verificaciones mientras se rellena cada campo, una vez rellenados todos y solo cuando todos cumplan los requisitos se desbloqueará el botón aceptar para enviar los datos al BACK y realizar validaciones posteriores como que el usuario no exista ya en la aplicación.
+
+\subsection{Login}
+
+Al igual que en el caso del registro se definirá su estado y componente a cargar correspondiente, dispondrá de un formulario con 2 campos a rellenar que son nombre de usuario y contraseña.
+
+Una vez rellenados se desbloquerá el botón \textbf{Siguiente} el cuál enviará los datos al servidor para su validación. En caso de éxito se enviará un token en la respuesta del servidor y se almacenará en el Local Storage, una vez logeado se redirigirá al estado home.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % RESULTADOS %
