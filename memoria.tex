@@ -600,9 +600,20 @@ Con la instalación de todos estos módulos ya tendriamos listo el BACK con todos 
 
 \section{Diseño de las páginas}
 
-\subsection{Registro y Login}
+En esta sección se realizará el diseño de las partes que compondrán nuestra aplicación, distinguiremos entre la página y los componentes que componen cada una de ellas. 
+Como requisito para poder navegar entre las distintas páginas estableceremos un token, que será generado durante el login y sin el cual serás redirigido a la página de login.
 
+\subsection{Diseño principal y Registro}
 
+Nuestra aplicación dispondrá de un header mediante el cuál se navegará por las distintas secciones de la aplicación, dependiendo de la dirección cargada en el navegador se cargará una página y sus correpondientes componentes. 
+
+Por defecto la página cargada tras el login será el \emph{HOME}, en caso de no haberse logeado previamente la aplicación le redirigirá al login.
+
+Esto lo hará con la ayuda del módulo \textit{express-jwt}, mediante el cual el servidor comprobará en cada petición si existe dicho token, si es válido y si no está fuera de fecha (dispone de una duración de validez de 1 hora).\\
+
+\textsl{\textbf{Header}}\\
+
+Como se definió anteriormente en los requisitos la página debe ser responsive, por lo que se adaptará a cualquier tamaño de pantalla.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
