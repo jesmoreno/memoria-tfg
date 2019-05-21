@@ -643,6 +643,15 @@ El componente estará compuesto por un formualrio en el que se rellenarán los sig
 	
 El formulario dispondrá de verificaciones mientras se rellena cada campo, una vez rellenados todos y solo cuando todos cumplan los requisitos se desbloqueará el botón aceptar para enviar los datos al BACK y realizar validaciones posteriores como que el usuario no exista ya en la aplicación.
 
+En caso de que no exista el usuario se creará un documento User (figura ~\ref{fig:users}) y se almacenará en la colección Users.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm, keepaspectratio]{img/users}
+	\caption{Documento user}
+	\label{fig:users}
+\end{figure}
+
 \subsection{Login}
 
 Al igual que en el caso del registro se definirá su estado y componente a cargar correspondiente, dispondrá de un formulario con 2 campos a rellenar que son nombre de usuario y contraseña.
