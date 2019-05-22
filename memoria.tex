@@ -679,6 +679,28 @@ La comprobación se realizará para todos los estados, exceptuando Login y Registr
 
 Esta será la página con la funcionalidad principal de la aplicación, lo primero de todo será declarar el estado en el archivo app-routing.module.ts.\\
 
+Como elementos principales tendrá:
+
+\begin{enumerate}
+	\item \textbf{Formulario de creación de partida}:\\
+	El componente padre será home.component, dentró del cual insertaremos como directiva otro llamado create-game. Este componente será el formulario encargado de la creación de la partida, dispone de campos a rellenar que son \textit{Nombre de la partida}, \textit{Deporte}, \textit{Nº límite de jugadores}, \textit{Fecha y hora} y \textit{Dirección}.\\
+	
+	Cada campo del formulario tiene una propiedad required que una vez rellenados, y si la propiedad error (validaciones específicas) de cada campo es null, cambia el estado de la propiedad valid del objeto Form a true, con lo que se desbloqueará el botón crear que enviará los datos al BACK para su validación. Toda la funcionalidad del formulario será gracias al módulo ReactiveForms, el cual dota al tag \textit{form} de herramientas para validación de datos y manejo de eventos.\\
+	
+	Si no existe ya el nombre de la partida en la Base de Datos, se creará el documento Game y se almacenará en la colección Games, además se actualizará el documento correspondiente al usuario que la creó insertando el id (correspondiente al de la colección Game) de la partida en el campo games, además del código postal y el deporte.\\
+	
+	Por último se le añade un botón de \textbf{Coger posición} con el que en lugar de introducir la dirección de forma manual, el evento click lanzará la petición para obtener la geolocalización mediante la funcionadlidad de HTML5.\\
+	
+	Una vez obtenidas las coordenadas con \textit{navigator.geolocation.getCurrentPosition()}, utilizaremos la latitud y longitud obtenidas para llamar a la API de Google de Geolocation y obtener los datos asociados como son calle, número, ciudad y código postal. Por último completamos esos campos en 
+	
+	
+	
+	
+	
+	\item \textbf{Mapa:}.
+	\item \textbf{Información de la partida sobre la que se ha hecho click}.
+\end{enumerate}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
