@@ -657,6 +657,29 @@ En caso de que no exista el usuario se creará un documento User (figura ~\ref{fi
 Al igual que en el caso del registro se definirá su estado y componente a cargar correspondiente, dispondrá de un formulario con 2 campos a rellenar que son nombre de usuario y contraseña.
 
 Una vez rellenados se desbloquerá el botón \textbf{Siguiente} el cuál enviará los datos al servidor para su validación. En caso de éxito se enviará un token en la respuesta del servidor y se almacenará en el Local Storage, una vez logeado se redirigirá al estado home.
+
+\textsl{\textbf{Token}}\\
+
+Para navegar por la aplicación hemos establecido un token que se crea durante el login, dicho token se almacena en el Local Storage. En el módulo encargado del routing se añade una propiedad en el objeto declarado para la carga del componente con su estado correspondiente que se encargará de comprobar si existe dicho token.\\
+
+Para que disponga de esta funcionalidad se implementa la clase \textbf{CanActivate} y como comprobación se tratará de obtener el token declarado como \textit{currentUser}, sólo permitirá la carga de los componentes si la comprobación devuelve true. En caso contrario no lo cargará y redirigirá a la página de login.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm, keepaspectratio]{img/canactivate}
+	\caption{Implementación CanActivate}
+	\centering
+	\includegraphics[width=10cm, keepaspectratio]{img/authGuard}
+	\caption{Declaración en el routing}
+\end{figure}
+
+La comprobación se realizará para todos los estados, exceptuando Login y Registro.
+
+\subsection{Home}
+
+Esta será la página con la funcionalidad principal de la aplicación, lo primero de todo será declarar el estado en el archivo app-routing.module.ts.\\
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % RESULTADOS %
