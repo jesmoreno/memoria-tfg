@@ -683,7 +683,7 @@ Como elementos principales tendrá:
 
 \begin{enumerate}
 	\item \textbf{Formulario de creación de partida}:\\
-	El componente padre será home.component, dentró del cual insertaremos como directiva otro llamado create-game. Este componente será el formulario encargado de la creación de la partida, dispone de campos a rellenar que son \textit{Nombre de la partida}, \textit{Deporte}, \textit{Nº límite de jugadores}, \textit{Fecha y hora} y \textit{Dirección}.\\
+	El componente padre será home.component, dentro del cual insertaremos como directiva otro llamado create-game. Este componente será el formulario encargado de la creación de la partida, dispone de campos a rellenar que son \textit{Nombre de la partida}, \textit{Deporte}, \textit{Nº límite de jugadores}, \textit{Fecha y hora} y \textit{Dirección}.\\
 	
 	Cada campo del formulario tiene una propiedad required que una vez rellenados, y si la propiedad error (validaciones específicas) de cada campo es null, cambia el estado de la propiedad valid del objeto Form a true, con lo que se desbloqueará el botón crear que enviará los datos al BACK para su validación. Toda la funcionalidad del formulario será gracias al módulo ReactiveForms, el cual dota al tag \textit{form} de herramientas para validación de datos y manejo de eventos.\\
 	
@@ -691,13 +691,25 @@ Como elementos principales tendrá:
 	
 	Por último se le añade un botón de \textbf{Coger posición} con el que en lugar de introducir la dirección de forma manual, el evento click lanzará la petición para obtener la geolocalización mediante la funcionadlidad de HTML5.\\
 	
-	Una vez obtenidas las coordenadas con \textit{navigator.geolocation.getCurrentPosition()}, utilizaremos la latitud y longitud obtenidas para llamar a la API de Google de Geolocation y obtener los datos asociados como son calle, número, ciudad y código postal. Por último completamos esos campos en 
+	Una vez obtenidas las coordenadas con \textit{navigator.geolocation.getCurrentPosition()}, utilizaremos la latitud y longitud obtenidas para llamar a la API de Google de Geolocation y obtener los datos asociados como son calle, número, ciudad y código postal. Para el uso de API necesitaremos una key generada desde la página de Google para desarrolladores. En cada llamada a la API debemos incluir dicha key para tener acceso al servicio.
+	Una vez obtenidos los datos solicitados, rellenaremos los campos del formulario para la creación de la partida gracias al data-binding.
 	
+	\item \textbf{Mapa:} mediante el módulo \textit{AgmCoreModule} haremos uso de la directiva agm-map en el html de la página home. De entre todas las propiedades de entrada nosotros haremos uso de la latitud, longitud y zoom para situar la región del mapa a mostrar, también haremos uso del evento soportado como es el doble click para fijar un marcador en el mapa (por defecto el doble click era para hacer zoom).\\
 	
+	Además de la directiva agm-map, utilizaremos agm-marker para situar los puntos de las partidas. Los parámetros de entrada serán latitud, longitud, icono y título; el único evento que se controlará es el click sobre el icono que se utilizará para mostrar la información de la partida.
 	
+	Todos los parámetros de entrada se obtienen mediante un servicio y se asignan a variables de la clase en el home.component.ts, en el home.component.html se pasan dichas variables a los parámetros de entrada de la directiva.
 	
+	Se deben definir una serie de filtros de búsqueda para las partidas:
+	\begin{itemize}
+		\item Input para la ciudad.
+		\item Radio button para seleccionar una de las 4 opciones de deportes disponible.
+		\item Radio button con las opciones de partidas: `Mis partidas' y `Otras'.
+	\end{itemize}
+	 
+	Nada mas cargar la página home, se obtendrán a través de un servicio los datos del usuario  que se pasarán a otro servicio y así cargar de forma predefinida las partidas propias del jugador de su deporte favorito en su ciudad.En caso de no estar inscrito en ninguna se mostrará un mensaje debajo del mapa de que no hay partidas. Al rellenar los filtros y pulsar un botón \textbf{Buscar} se lanzará el mismo servicio de búsqueda inicial pero con los nuevos parámetros.
 	
-	\item \textbf{Mapa:}.
+	Una vez obtenidos los datos se le asignarán a los objetos que utiliza el html en el mapa a través del data-binding.
 	\item \textbf{Información de la partida sobre la que se ha hecho click}.
 \end{enumerate}
 
