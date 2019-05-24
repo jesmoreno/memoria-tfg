@@ -694,7 +694,8 @@ Como elementos principales tendrá:
 	Una vez obtenidas las coordenadas con \textit{navigator.geolocation.getCurrentPosition()}, utilizaremos la latitud y longitud obtenidas para llamar a la API de Google de Geolocation y obtener los datos asociados como son calle, número, ciudad y código postal. Para el uso de API necesitaremos una key generada desde la página de Google para desarrolladores. En cada llamada a la API debemos incluir dicha key para tener acceso al servicio.
 	Una vez obtenidos los datos solicitados, rellenaremos los campos del formulario para la creación de la partida gracias al data-binding.
 	
-	\item \textbf{Mapa:} mediante el módulo \textit{AgmCoreModule} haremos uso de la directiva agm-map en el html de la página home. De entre todas las propiedades de entrada nosotros haremos uso de la latitud, longitud y zoom para situar la región del mapa a mostrar, también haremos uso del evento soportado como es el doble click para fijar un marcador en el mapa (por defecto el doble click era para hacer zoom).\\
+	\item \textbf{Mapa:}\\
+	Mediante el módulo \textit{AgmCoreModule} haremos uso de la directiva agm-map en el html de la página home. De entre todas las propiedades de entrada nosotros haremos uso de la latitud, longitud y zoom para situar la región del mapa a mostrar, también haremos uso del evento soportado como es el doble click para fijar un marcador en el mapa (por defecto el doble click era para hacer zoom). Le pasaremos la información obtenida del mapa con la acción del doble click (latitud, longitud) a la API de Google para obtener la dirección física de ese punto y añadirla al formulario de creación.\\
 	
 	Además de la directiva agm-map, utilizaremos agm-marker para situar los puntos de las partidas. Los parámetros de entrada serán latitud, longitud, icono y título; el único evento que se controlará es el click sobre el icono que se utilizará para mostrar la información de la partida.
 	
@@ -710,7 +711,12 @@ Como elementos principales tendrá:
 	Nada mas cargar la página home, se obtendrán a través de un servicio los datos del usuario  que se pasarán a otro servicio y así cargar de forma predefinida las partidas propias del jugador de su deporte favorito en su ciudad.En caso de no estar inscrito en ninguna se mostrará un mensaje debajo del mapa de que no hay partidas. Al rellenar los filtros y pulsar un botón \textbf{Buscar} se lanzará el mismo servicio de búsqueda inicial pero con los nuevos parámetros.
 	
 	Una vez obtenidos los datos se le asignarán a los objetos que utiliza el html en el mapa a través del data-binding.
-	\item \textbf{Información de la partida sobre la que se ha hecho click}.
+	
+	\item \textbf{Información de la partida sobre la que se ha hecho click}:\\
+	Toda la información de una partida clickeada la guardamos en un objeto llamado gameClicked, por defecto al obtener la información de todas nos quedaremos con la primera para mostrar su información. Al pulsar sobre el marcador de una partida, obtenemos el campo title y a partir de él obtenemos el objeto del array de las partidas y mostramos su información.
+	
+	En el documento games hemos guardado un campo llamado \textbf{host} donde almacenamos el nombre del creador.
+	
 \end{enumerate}
 
 
