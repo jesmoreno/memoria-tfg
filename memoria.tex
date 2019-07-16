@@ -19,7 +19,6 @@
 
 \documentclass[a4paper, 12pt, onecolumn, openany]{book}
 %\usepackage[T1]{fontenc}
-
 \usepackage[a4paper, left=2.5cm, right=2.5cm, top=3cm, bottom=3cm]{geometry}
 \usepackage{times}
 \usepackage[latin1]{inputenc}
@@ -105,7 +104,7 @@ Tutor : Pedro de las Heras Quirós
 
 \vspace{1cm}
 \large
-Título del Trabajo con Letras Capitales para Sustantivos y Adjetivos
+Aplicación WEB para la creación de eventos deportivos en localización determinada.
 
 \vspace{1cm}
 \large
@@ -115,7 +114,7 @@ Título del Trabajo con Letras Capitales para Sustantivos y Adjetivos
 \end{center}
 
 \vspace{1cm}
-La defensa del presente Proyecto Fin de Carrera se realizó el día \qquad$\;\,$ de \qquad\qquad\qquad\qquad \newline de 20XX, siendo calificada por el siguiente tribunal:
+La defensa del presente Proyecto Fin de Carrera se realizó el día \qquad$\;\,$ de \qquad\qquad\qquad\qquad \newline de 2019, siendo calificada por el siguiente tribunal:
 
 
 \vspace{0.5cm}
@@ -137,7 +136,7 @@ y habiendo obtenido la siguiente calificación:
 
 \vspace{1cm}
 \begin{flushright}
-Fuenlabrada, a \qquad$\;\,$ de \qquad\qquad\qquad\qquad de 20XX
+Fuenlabrada, a \qquad$\;\,$ de \qquad\qquad\qquad\qquad de 2019
 \end{flushright}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -147,7 +146,7 @@ Fuenlabrada, a \qquad$\;\,$ de \qquad\qquad\qquad\qquad de 20XX
 \pagenumbering{Roman} % para comenzar la numeracion de paginas en numeros romanos
 \begin{flushright}
 \textit{Dedicado a \\
-mi familia / mi abuelo / mi abuela}
+mi familia / mi abuelo / mi pareja}
 \end{flushright}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -157,8 +156,14 @@ mi familia / mi abuelo / mi abuela}
 %\addcontentsline{toc}{chapter}{Agradecimientos} % si queremos que aparezca en el índice
 \markboth{AGRADECIMIENTOS}{AGRADECIMIENTOS} % encabezado 
 
-Aquí vienen los agradecimientos\ldots Aunque está bien acordarse de la pareja, no hay que olvidarse de dar las gracias a tu madre, que aunque a veces no lo parezca disfrutará tanto de tus logros como tú\ldots 
-Además, la pareja quizás no sea para siempre, pero tu madre sí.
+Después de casi un año de esfuerzo comienzo a escribir este apartado para finalizar mi trabajo de fin de grado. Pese a las dificultades por falta de tiempo, ya que me encontraba trabajando, considero que el resultado final ha sido satisfactorio. Me gustaría agradecer a todas aquellas personas que me han ayudado y apoyado durante el proceso.\\
+
+En primer lugar me gustaría agradecer a mis padres y hermana, quiénes siempre han estado apoyándome y sufriendo tanto o más que yo.\\
+También me gustaría agradecer a mi pareja, sin su motivación para que me pusiera las pilas y acabará con el trabajo puede que se hubiera alargado más de lo necesario. Ha sido una gran influencia para mí durante toda la carrera y sabe bien lo que se sufre puesto que estudió lo mismo y conoce lo duro que es.\\
+
+En último lugar me gustaría agradecer a la persona que considero que fue y será allá donde esté mi mayor apoyo, mi abuelo. Gracias a él me decidí a estudiar esta carrera y no me arrepiento, pese al pésimo primer año que tuve siempre confió en mis capacidades y estuvo ahí para aconsejarme sabiamente. Lo que más lamento es que nunca me verá graduarme, por eso me gustaría dedicarle este proyecto a él.\\
+
+¡Muchas gracias a todos!
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ÍNDICES %
@@ -193,7 +198,7 @@ Además, la pareja quizás no sea para siempre, pero tu madre sí.
 Mediante este proyecto se ha implementado una aplicación web cuyo principal objetivo es la creación de puntos de encuentro con carácter deportivo, de manera que se pueda jugar un partido de tu deporte favorito en caso de no disponer de los conocidos necesarios para un día concreto. De esta manera se fomenta el establecimiento de nuevas amistades con el deporte como punto en común.\\
 
 La realización de esta aplicación ha buscado que la creación y unión de los usuarios a la partida fuera lo más rápido e intiutivo posible.
-Para dicha aplicación se han utilizado las siguientes tecnologías de desarrollo como Angular5, Angular Material, Visual Studio Code, HTML5, CSS3, nodeJS, expressJS, javascript, typescript, MongoDB , Maps JavaScript API, Geocoding API.
+Para dicha aplicación se han utilizado las siguientes tecnologías de desarrollo como Angular5, Angular Material, Visual Studio Code, HTML5, CSS3, NodeJS, ExpressJS, Javascript, Typescript, MongoDB , Maps JavaScript API, Geocoding API.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % OBJETIVOS %
@@ -202,78 +207,78 @@ Para dicha aplicación se han utilizado las siguientes tecnologías de desarrollo 
 \chapter{Introducción} % título del capítulo (se muestra)
 \label{chap:objetivos} % identificador del capítulo (no se muestra, es para poder referenciarlo)
 
-El desarrollo del Trabajo Fin de Grado se centra en el ámbito deportivo y la utilización de herramientas web para facilitar su realización. A continuación se expondrá una pequeña introducción de conceptos básicos sobre el desarrollo web y las tecnologías utilizadas para la realización de dicha aplicación.
+El desarrollo del Trabajo Fin de Grado se centra en el ámbito deportivo y la utilización de herramientas Web para facilitar su realización. A continuación se expondrá una pequeña introducción de conceptos básicos sobre el desarrollo Web y las tecnologías utilizadas para la realización de dicha aplicación.
 
-\section{Desarrollo web} % título de sección (se muestra)
+\section{Desarrollo Web} % título de sección (se muestra)
 \label{sec:objetivo-general} % identificador de sección (no se muestra, es para poder referenciarla)
 La vida actual gira entorno a la evolución tecnológica en la que nos encontramos sumergidos, en un periodo muy corto de tiempo hemos sufrido una gran evolución.\\
 
-Las tecnologías web se encuentran fuertemente arraigadas en nuestro día a día y con motivo de ello deben renovarse continuamente para facilitar el desarrollo de aplicaciones en el menor tiempo posible, facilitar su mantenimiento y mejorar su rendimiento.\\
+Las tecnologías Web se encuentran fuertemente arraigadas en nuestro día a día y con motivo de ello deben renovarse continuamente para facilitar el desarrollo de aplicaciones en el menor tiempo posible, facilitar su mantenimiento y mejorar su rendimiento.\\
 
-Debemos retroceder a 1991, año en el que se publicó la primera página web por Tim Berners-Lee. \\La web 1.0 se denomina así para definir todo lo creado anteriormente al fenómeno de la Web 2.0 y se trataban de páginas estáticas en HTML donde el papel del usuario era totalmente pasivo.\\
+Debemos retroceder a 1991, año en el que se publicó la primera página Web por Tim Berners-Lee. \\La Web 1.0 se denomina así para definir todo lo creado anteriormente al fenómeno de la Web 2.0 y se trataban de páginas estáticas en HTML donde el papel del usuario era totalmente pasivo.\\
 
-La web 2.0 era de carácter social, al contrario que su predecesor, se basaba en usuarios activos y se produjo un gran auge de los blogs, redes sociales, webs creadas por usuarios, etc.\\
+La Web 2.0 era de carácter social, al contrario que su predecesor, se basaba en usuarios activos y se produjo un gran auge de los blogs, redes sociales, Webs creadas por usuarios, etc.\\
 
-Por último nos encontramos ante la Web 3.0 dada por el avance tecnológico hacia inteligencia artificial y de la web semántica, donde es primordial el diseño responsive para la adaptación a cualquier dispositivo.\\
+Por último nos encontramos ante la Web 3.0 dada por el avance tecnológico hacia inteligencia artificial y de la Web semántica, donde es primordial el diseño \emph{responsive} para la adaptación a cualquier dispositivo.\\
 
-En el diseño web debemos tener en cuenta las herramientas a utilizar, diseño y la metodología de desarrollo utilizada, con el continuo desarrollo de las tecnologías se ha reducido la dificultad de implementación de las dichas web.
+En el diseño Web debemos tener en cuenta las herramientas a utilizar, diseño y la metodología de desarrollo utilizada, con el continuo desarrollo de las tecnologías se ha reducido la dificultad de implementación de las dichas Web.
 
 
-\section{Tecnologías web}
+\section{Tecnologías Web}
 \label{sec:tecnologias-web}
-Son todas aquellas herramientas utilizadas en la creación de sitios web o aplicaciones online, podemos diferenciar entre librería, framework, API y lenguaje.
+Son todas aquellas herramientas utilizadas en la creación de sitios Web o aplicaciones online, podemos diferenciar entre librería, \emph{framework}, API y lenguaje.
 
 
 \subsection{Lenguaje}
 Según wikipedia: \textit{ ``un lenguaje de programación\footnote{\url{https://es.wikipedia.org/wiki/Lenguaje_de_programacion}} es un lenguaje formal que proporciona una serie de instrucciones que permiten a un programador escribir secuencias de órdenes y algoritmos a modo de controlar el comportamiento físico y lógico de una computadora con el objetivo de que produzca diversas clases de datos. A todo este conjunto de órdenes y datos escritos mediante un lenguaje de programación se le conoce como programa."}\\
 
-Para el caso del desarrollo web podemos diferenciar entre lenguajes para el Front-End y Back-End, en el lado del cliente debemos tener en cuenta que el navegador compila e interpreta sólo archivos HTML, CSS y como lenguaje de lógica Javascript.\\ Existen lenguajes como Typescript, Coffesscript.. que deben ser compilados a Javascript para su uso por parte del navegador.
+Para el caso del desarrollo Web podemos diferenciar entre lenguajes para el \emph{Front-End} y \emph{Back-End}, en el lado del cliente debemos tener en cuenta que el navegador compila e interpreta sólo archivos HTML, CSS y como lenguaje de lógica Javascript.\\ Existen lenguajes como Typescript ó Coffesscript que deben ser compilados a Javascript para su uso por parte del navegador.
 
 \subsubsection{Typescript}
-Se trata de un lenguaje de programación de alto nivel orientado a objetos, como ya se ha comentado anteriormente se ``transpila'' en Javascript nativo, es un superset.\\
+Se trata de un lenguaje de programación de alto nivel orientado a objetos, como ya se ha comentado anteriormente se ``transpila'' en Javascript nativo, es un \emph{superset}.\\
 
 Al contrario que Javascript, Typescript está realmente orientado a objetos, posee herramientas como la herencia o sobrecarga (resulta similar a Java). En el caso de esta aplicación su uso ha sido necesario puesto que Angular está hecho en Typescript.
 \subsubsection{Javascript}
 Como hemos comentado anteriormente es el lenguaje que interpretará el navegador, entrará en juego cada vez que la página tenga que hacer algo más que representar información estática. Es un lenguaje de programación orientado a objetos de tipado muy débil y dinámico.\\
 
-El ámbito de utilización del lenguaje no se reduce sólo al lado del cliente, también es utilizado en frameworks de la parte del servidor basados en NodeJS.
+El ámbito de utilización del lenguaje no se reduce sólo al lado del cliente, también es utilizado en \emph{frameworks} de la parte del servidor basados en NodeJS.
 \subsubsection{HTML5}
 Es la quinta revisión del lenguaje principal de la World Wide Web, el HTML. Podemos diferenciar entre 2 variantes de sintaxis para HTML, una básica que se sirve de HTML conocida como \textbf{HTML5} y otra variante conocida como \textbf{XHTML5} que se sirve como sintáxis XML.\\ Este lenguaje de marcado se encuentra regulado por el Consorcio \textbf{W3C}\footnote{\url{https://es.wikipedia.org/wiki/World_Wide_Web_Consortium}}.\\
 
 Algunas de las mejoras introducidas con el HTML5 son:
 \begin{itemize}
-	\item Ampliación del elemento \textbf{input} perimitiendo tipos de datos como range, email, url, search...
-	\item Introducción de elementos de audio y video para incrustar contenido multimedia.
+	\item Ampliación del elemento \textbf{input} permitiendo tipos de datos como range, email, url, search, entre otras.
+	\item Introducción de elementos de audio y vídeo para incrustar contenido multimedia.
 	\item Aparece el elemento \textbf{canvas} que permite la generación de gráficos y `dibujar' lo que se quiera dentro de él. Un ejemplo actual de su uso sería Google Maps.
 \end{itemize}
 
-Estas serían algunas de las mejoras introducidas por las cuales se reduce el uso de plugins por parte del desarrollador.
+Estas serían algunas de las mejoras introducidas por las cuales se reduce el uso de \emph{plugins} por parte del desarrollador.
 \subsubsection{CSS3}
 el lenguaje encargado de darle el estilo al documento HTML o XML es el CSS. CSS3 es la tercera versión y algunas de las nuevas funcionalidades introducidas serían las esquinas redondeadas de los elementos, gradientes, transiciones o animaciones y nuevos diseños como multi-columnas, cajas flexibles o \textit{grids} (diseño de cuadrícula). 
 
 \subsection{Framework}
 \label{subsec:framworks}
-Por definición un \textbf{framework}\footnote{\url{https://es.wikipedia.org/wiki/Framework}}. es un conjunto estandarizado de conceptos, prácticas y criterios para enfocar un tipo de problemática particular que sirve como referencia, para enfrentar y resolver nuevos problemas de índole similar.\\
+Por definición un \emph{framework}\footnote{\url{https://es.wikipedia.org/wiki/Framework}}. es un conjunto estandarizado de conceptos, prácticas y criterios para enfocar un tipo de problemática particular que sirve como referencia, para enfrentar y resolver nuevos problemas de índole similar.\\
 
-Hoy en día existen multitud de frameworks para el desarrollo de aplicaciones web y es imprescindible conocer el entorno en el que se ejecuta cada uno de ellos, podemos diferenciar entre los orientados para cliente (Front-End), orientado a servidor (Back-End) o a ambos (Full-Stack).
-Actualmente se usan una gran cantidad de frameworks, para el desarrollo de esta aplicación se han utilizado: \textbf{Angular}\footnote{\url{https://angular.io}}, concretamente la v5, para la realización del Front-End y \textbf{ExpressJS}\footnote{\url{https://expressjs.com/es}} y \textbf{NodeJS}\footnote{\url{https://nodejs.org/es/}}  para el Back-End\footnote{\url{https://es.wikipedia.org/wiki/Front-end_y_back-end}} .
+Hoy en día existen multitud de \emph{frameworks} para el desarrollo de aplicaciones Web y es imprescindible conocer el entorno en el que se ejecuta cada uno de ellos, podemos diferenciar entre los orientados para cliente (\emph{Front-End}), orientado a servidor (\emph{Back-End}) o a ambos (\emph{Full-Stack}).
+Actualmente se usan una gran cantidad de \emph{frameworks}, para el desarrollo de esta aplicación se han utilizado: \textbf{Angular}\footnote{\url{https://angular.io}}, concretamente la v5, para la realización del \emph{Front-End} y \textbf{ExpressJS}\footnote{\url{https://expressjs.com/es}} y \textbf{NodeJS}\footnote{\url{https://nodejs.org/es/}}  para el \emph{Back-End}\footnote{\url{https://es.wikipedia.org/wiki/Front-end_y_back-end}} .
 
 \subsubsection{Angular}
-Se trata de un framework Front-End desarrollado en typescript, el objetivo es que el peso de la lógica y renderizado sea tarea del navegador y así liberar al servidor de trabajo.
-Mediante peticiones REST obtendremos la información necesaria para el correcto funcionamiento de nuestra aplicación.\\
+Se trata de un \emph{framework} \emph{Front-End} desarrollado en Typescript, el objetivo es que el peso de la lógica y renderizado sea tarea del navegador y así liberar al servidor de trabajo.
+Mediante peticiones \emph{REST}\footnote{\url{https://bbvaopen4u.com/es/actualidad/api-rest-que-es-y-cuales-son-sus-ventajas-en-el-desarrollo-de-proyectos}} obtendremos la información necesaria para el correcto funcionamiento de nuestra aplicación.\\
 
-Fue creado por Google con la intención de mejorar su framework anterior (\textbf{AngularJS}), pese a ser la evolución de éste son incompatibles.\\
+Fue creado por Google con la intención de mejorar su \emph{framework} anterior (AngularJS), pese a ser la evolución de éste son incompatibles.\\
 
 Existe una gran cantidad de información en internet para su aprendizaje y al igual que su antecesor, mantiene una gran rivalidad con \textbf{React}\footnote{\url{https://reactjs.org/}}, que fue creado por Facebook.
 
-El lenguaje utilizado para el desarrollo de una aplicación Angular es typescript, 
+El lenguaje utilizado para el desarrollo de una aplicación Angular es Typescript, 
 
 \subsubsection{NodeJS}
 Se trata de un entorno en tiempo de ejecución multiplataforma, de código abierto, para la capa del servidor (pero no limitándose a ello) basado en el lenguaje de programación ECMAScript, asíncrono, con I/O de datos en una arquitectura orientada a eventos y basado en el motor V8 de Google.
 
 \subsubsection{ExpressJS}
-Se trata de un framework Back-End de aplicaciones web Node.js mínima y flexible que proporciona un conjunto sólido de características para las aplicaciones web y móviles.
-Dispone de una robusta API que permite a los usuarios configurar las rutas para la interacción entre el Front-End y la base de datos. 
+Se trata de un \emph{framework} \emph{Back-End} de aplicaciones web Node.js mínima y flexible que proporciona un conjunto sólido de características para las aplicaciones Web y móviles.
+Dispone de una robusta API que permite a los usuarios configurar las rutas para la interacción entre el \emph{Front-End} y la base de datos. 
 
 \subsection{Librería}
 
@@ -287,34 +292,34 @@ Ofrecen una solución óptima para tareas asíncronas complejas.
 Una librería de gran ayuda que analiza el código desarrollado y encuentra problemas como podrían ser líneas de código que nunca se ejecutarán y variables que nunca se han utilizado entre otras muchas.
 Se utiliza para mantener una serie de reglas en la codificación que facilitarán su desarrollo y mantenimiento, sobre todo en el caso de que se desarrolle en equipo ya que se evita que los hábitos de cada uno dificulten el seguimiento del código (se mantiene cierta estructura común para todos).
 \subsubsection{Webpack}
-Se trata en un empaquetador de módulos para modernas aplicaciones Javascript. En el momento que webpack procesa tu aplicación, contruye un grafo de dependencias el cual mapea cada módulo que necesita la aplicación y genera 1 o más paquetes.
+Se trata en un empaquetador de módulos para modernas aplicaciones Javascript. En el momento que Webpack procesa tu aplicación, construye un grafo de dependencias el cual mapea cada módulo que necesita la aplicación y genera 1 o más paquetes.
 \subsubsection{Angular Material}
 Esta librería está centrada en el diseño de componentes de Angular creada por Google, en ella podrás encontrar una gran cantidad de elementos para facilitar la creación y diseño de componentes y aplicaciones.\\
-Además se tratan de componentes que ya son responsive, esto quiere decir que se adaptarán a distintos terminales (móviles, tablets, portátiles y ordenadores de sobremesa).
+Además se tratan de componentes que ya son \emph{responsive}, esto quiere decir que se adaptarán a distintos terminales (móviles, tablets, portátiles y ordenadores de sobremesa).
 \subsection{API}
 
 La palabra API viene dada por \textbf{Application Programming Interface} (Interfaz de Programación de Aplicaciones), este concepto hace referencia a todos aquellos procesos, funciones y métodos que da una biblioteca de programación como capa de abstracción para que lo utilice otro programa.\\
-Gracias a las APIs podemos recurrir a la funcionalidad que dé una en concreto y así ahorrar el trabajo de desarrollarla de cero. en el caso de esta aplicación se han utilizado 2 APIs propedad de Google:
+Gracias a las APIs podemos recurrir a la funcionalidad que dé una en concreto y así ahorrar el trabajo de desarrollarla de cero. en el caso de esta aplicación se han utilizado 2 APIs propiedad de Google:
 \subsubsection{Geocoding API}\footnote{\url{https://developers.google.com/maps/documentation/geocoding/intro}}
-Es una API de Google capaz de convertir las direcciones en coordenadas geográficas, en el caso de caso de esta aplicación se ha utilizado esta funcionalidad y la inversa \textbf{Reverse geocoding}, que consiste en la obtención de direcciones a traves de las coordenadas..
+Es una API de Google capaz de convertir las direcciones en coordenadas geográficas, en el caso de caso de esta aplicación se ha utilizado esta funcionalidad y la inversa \textbf{Reverse geocoding}, que consiste en la obtención de direcciones a través de las coordenadas.
 \subsubsection{Maps Javascript API}\footnote{\url{https://developers.google.com/maps/documentation/javascript/tutorial}}
-Se trata de una API de Google que permite la creación de mapas personalizados con tu propio contenido y mostrarlos en páginas web. Para el caso de uso, se han utilizado marcadores de posición personalizados (pelotas de deporte) y mediante el evento de doble click sobre el mapa se han obtenido las coordenadas de la posición del mapa para su posterior almacenamiento.\\
+Se trata de una API de Google que permite la creación de mapas personalizados con tu propio contenido y mostrarlos en páginas Web. Para el caso de uso, se han utilizado marcadores de posición personalizados (pelotas de deporte) y mediante el evento de doble \emph{click} sobre el mapa se han obtenido las coordenadas de la posición del mapa para su posterior almacenamiento.\\
 Permite capturar multitud de eventos para realizar el tratamiento de ellos en función de la necesidad de la aplicación.\\
 
-Para el uso de las APIs de Google es necesario la creación de una key, en cada petición http deberá incluirse la key ya que sino no se tendrá acceso a la funcionalidad de las APIs utilizadas. Hace poco entró en vigor una nueva norma por la cual deberá dejarse registrado un método de pago, en caso de exceder el número de peticiones máximas por mes en cada API se procederá al cobro automático por cada uso fuera del servicio mínimo.  
+Para el uso de las APIs de Google es necesario la creación de una \emph{key}, en cada petición \textbf{HTTP} deberá incluirse la \emph{key} ya que sino no se tendrá acceso a la funcionalidad de las APIs utilizadas. Hace poco entró en vigor una nueva norma por la cual deberá dejarse registrado un método de pago, en caso de exceder el número de peticiones máximas por mes en cada API se procederá al cobro automático por cada uso fuera del servicio mínimo.  
 
 \subsection{Programación reactiva}
-Anteriormente se ha hecho uso de un término muy importante en la programación web de hoy en día, se trata de la \textbf{reactividad}.\\
-La programación reactiva es la programación con flujos de datos asíncronos, el típico evento de click en una página web es un flujo de datos que puedes observar y por el cual desencadenar una serie de eventos sobre el contenido de la página. Se pueden realizar multitud de acciones sobre los datos cómo filtrarlos, combinarlos con otros, crear nuevos a partir de ellos... \\
+Anteriormente se ha hecho uso de un término muy importante en la programación Web de hoy en día, se trata de la \textbf{reactividad}.\\
+La programación reactiva es la programación con flujos de datos asíncronos, el típico evento de \emph{click} en una página Web es un flujo de datos que puedes observar y por el cual desencadenar una serie de eventos sobre el contenido de la página. Se pueden realizar multitud de acciones sobre los datos cómo filtrarlos, combinarlos con otros y crear nuevos a partir de ellos. \\
 
-Un flujo o stream es una secuencia de eventos ordenados en el tiempo de los que podemos diferenciar 3 tipos:
+Un flujo o \emph{stream} es una secuencia de eventos ordenados en el tiempo de los que podemos diferenciar 3 tipos:
 \begin{itemize}
 	\item Valor.
 	\item Error.
 	\item Señal de completado. 
 \end{itemize}
 Estos eventos emitidos de forma asíncrona pueden ser capturados mediante la definición de funciones que serán ejecutadas cuando se emita un valor, funciones de error cuando se emita el error por un fallo y otra función cuando el 'completado' es emitido.
-La forma de enterarse de estas emisiones es mediante el concepto de subscripción, donde el 'observador' sería la función y el 'observado' sería el stream. 
+La forma de enterarse de estas emisiones es mediante el concepto de subscripción, donde el 'observador' sería la función y el 'observado' sería el \emph{stream}. 
 
 \section{Base de datos}
 La base de datos utilizada por la aplicación es MongoDB y la librería mediante la cual se generan los documentos y realizan las operaciones \textbf{CRUD}\footnote{\url{https://es.wikipedia.org/wiki/CRUD}} es \textbf{Mongoose}\footnote{\url{https://mongoosejs.com/docs/guide.html}}.
@@ -344,23 +349,23 @@ Mongoose es un Object Document Mapper\footnote{\url{https://www.quora.com/What-i
 Dispone de múltiples herramientas mediante las cuales puedes definir funciones de validación de datos personalizadas, indicar que un campo es requerido ó convertir strings a minúsculas o mayúsculas entre otras muchas.
 
 \section{Herramientas de trabajo en equipo}
-En el desarrollo de páginas y aplicaciones web es fundamental una buena organización, aquí entran en juego las metodolgías ágiles y herramientas para el trabajo en equipo. En busca de una reducción en el tiempo de desarrollo con el mejor resultado posible aparecieron las metodologías ágiles cuyas bases son:
+En el desarrollo de páginas y aplicaciones Web es fundamental una buena organización, aquí entran en juego las metodologías ágiles y herramientas para el trabajo en equipo. En busca de una reducción en el tiempo de desarrollo con el mejor resultado posible aparecieron las metodologías ágiles cuyas bases son:
 
 \begin{itemize}
 	\item La mayor prioridad es la satisfacción del cliente.
 	\item Entrega periódica de software.
 	\item Transmisión de la información preferiblemente cara a cara.
-	\item Capacidad de autorganización por parte del equipo.
+	\item Capacidad de autoorganización por parte del equipo.
 	\item Aceptar el cambio de requisitos durante su desarrollo.
 \end{itemize}
 
 Existen múltiples metodologías ágiles entre las que se pueden destacar \textbf{SCRUM}\footnote{\url{https://es.wikipedia.org/wiki/Scrum_(desarrollo_de_software)}} y \textbf{Extreme Programming (XP)}.\\
 
-La metodología ágil consiste en una serie de buenas prácticas para maximizar el rendimiento del equipo de desarrollo y como ayuda para ello se utilizan herramientas como \textbf{Github}, \textbf{Jira}, \textbf{Slack} y \textbf{Skype} entre otras.
+La metodología ágil consiste en una serie de buenas prácticas para maximizar el rendimiento del equipo de desarrollo y como ayuda para ello se utilizan herramientas como \textbf{Github}, \textbf{Jira}, \textbf{Slack} y \textbf{Skype} entre otras. Para este proyecto sólo se ha utilizado \textbf{Github} como repositorio dónde almacenar el código y desarrollar distintas ramas de desarrollo que finalmente se ha unido en el producto final.
 
 \subsection{Git y Github}
 
-Git es un software de control de versiones pensado para lograr la mayor eficiencia y confiabilidad del mantenimiento de versiones de aplicaciones. Crea una copia del proyecto en desarrollo en un repositorio y mediante commits se almacenan diversas versiones del mismo que se pueden recuperar posteriormente. Permite la creación de ramas (branches) de versiones que en el momento deseado pueden unirse al proyecto principal (master).\\
+Git es un software de control de versiones pensado para lograr la mayor eficiencia y confiabilidad del mantenimiento de versiones de aplicaciones. Crea una copia del proyecto en desarrollo en un repositorio y mediante \emph{commits} se almacenan diversas versiones del mismo que se pueden recuperar posteriormente. Permite la creación de ramas (\emph{branches}) de versiones que en el momento deseado pueden unirse al proyecto principal (\emph{master}).\\
 A la hora de desarrollar en equipo esto es algo fundamental pues los miembros del equipo podrían realizar desarrollos en paralelo para posteriormente unirlo en el proyecto principal.\\
 
 Todo esto se realizaría mediante Github, es una plataforma de desarrollo colaborativo de software donde se almacenan proyectos públicos o privados (mediante pago) que utiliza el sistema de control de versiones Git.
@@ -369,7 +374,7 @@ Todo esto se realizaría mediante Github, es una plataforma de desarrollo colabor
 Dentro de las fases durante el desarrollo del proyecto, la primera de todas sería el análisis y establecimiento de requisitos.\\
 Jira es una plataforma para la gestión y administración de proyectos que permite planear y realizar un seguimiento del proyecto, es ideal para equipos de trabajo que implementen estrategias de desarrollo Agile como SCRUM.\\
 
-Dentro de Jira existe un parámetro llamado \textbf{Incidencia-Issue} que puede representar tanto una tarea, un bug, un ticket de soporte, un feedback... que dispone de 3 atributos:
+Dentro de Jira existe un parámetro llamado \textbf{Incidencia-Issue} que puede representar tanto una tarea, un \emph{bug}, un ticket de soporte, un \emph{feedback}; que dispone de 3 atributos:
 \begin{itemize}
 	\item Prioridad: indica la importancia.
 	\item Estado: 'donde' está la incidencia respecto al flujo de trabajo.
@@ -407,7 +412,7 @@ Hoy en día existen aplicaciones de diverso carácter cuyo objetivo es relacionar 
 
 En mi caso la idea de este proyecto surgió debido a que para quedar con los amigos para jugar al baloncesto hacemos uso de un grupo de Whatsapp, esto limita bastante ya que la cantidad de gente con la que puedas realizar la actividad deportiva se limita a conocidos y podrían ser pocos y que no todos puedan el mismo día.
 
-De esta necesidad surge la motivación de crear una aplicación web con la que aumentar la cantidad de jugadores posibles e incluso fomentar el conocer gente nueva con la que entablar una amistad, en este caso con tu deporte favorito como punto en común.
+De esta necesidad surge la motivación de crear una aplicación Web con la que aumentar la cantidad de jugadores posibles e incluso fomentar el conocer gente nueva con la que entablar una amistad, en este caso con tu deporte favorito como punto en común.
 
 \section{Objetivos} 
 \label{sec:seccion2}
@@ -416,7 +421,7 @@ Analizando los motivos previamente expuestos, extraemos una serie de objetivos q
 
 \begin{enumerate}
 	\item La aplicación debe ser atractiva a la vista del usuario e intuitiva.
-	\item La aplicación debe estar optimizada.
+	\item La aplicación debe estar optimizada, es decir, la mayor velocidad de carga posible y que el tiempo de espera por cada acción sea bajo.
 	\item La creación de una partida debe ser rápida y sencilla.
 \end{enumerate}
 
@@ -429,19 +434,19 @@ Estos serían los requisitos que la aplicación debe cumplir:
 	\item \textbf{Registro de usuario}
 	\begin{enumerate}
 		\item Debe existir una interfaz para la creación de un usuario, para el posterior uso de la aplicación.
-		\item Todo el contenido de la aplicación será accesible tras el previo logeado, el contenido no será mostrado sin haberse registrado previamente.
-		\item El forulario de registro consistirá en un nombre de usuario, contraseña, correo, deporte favorito y datos de la localización del usuario.
+		\item Todo el contenido de la aplicación será accesible tras la previa autenticación, el contenido no será mostrado sin haberse registrado previamente.
+		\item El formulario de registro consistirá en un nombre de usuario, contraseña, correo, deporte favorito y datos de la localización del usuario.
 		\item El acceso será mediante usuario y contraseña, el correo será utilizado para notificaciones. 
 	\end{enumerate}
 	\item \textbf{Experiencia de usuario}
 	\begin{enumerate}
 		\item El usuario debe ser capaz de crear un partida en el menor tiempo posible.
-		\item Tras logearse, el usuario debe ver una lista de partidas adaptadas a sus datos (localización y deporte favorito).
+		\item Tras autenticarse, el usuario debe ver una lista de partidas adaptadas a sus datos (localización y deporte favorito).
 		\item El usuario debe poder filtrar por deporte y localización, además de distinguir de partidas en las que está inscrito y las que aún no.
 		\item Ante la posibilidad de que se juegue al aire libre, debemos dotar al usuario de la posibilidad de consultar las condiciones atmosféricas durante la semana.
 		\item Cada usuario debe poder crear una partida rellenando un formulario.
-		\item El host o creador de la partida será el único con capacidad para eliminar la partida.
-		\item El host de la partida podrá añadir a amigos agregados previamente. 
+		\item El \emph{host} o creador de la partida será el único con capacidad para eliminar la partida.
+		\item El \emph{host} de la partida podrá añadir a amigos agregados previamente. 
 		\item Los usuarios inscritos en una partida deben recibir notificaciones de los que se inscriban posteriormente.
 		\item Posibilidad de agregar y eliminar usuarios de una lista de amigos.
 		
@@ -451,15 +456,15 @@ Estos serían los requisitos que la aplicación debe cumplir:
 		\item Existirán notificaciones de inscripción de usuarios en partidas en las que uno esté previamente inscrito.
 		\item Notificaciones de eliminación de partida para los jugadores inscritos.
 		\item Existirá una interfaz a través de la cual visualizar las condiciones atmosféricas, dichos datos serán consultados mediante una API y podrán consultarse por localización específica mediante un buscador.
-		\item Mediante la elección de deporte favorito durante el registro, se dotará al usuario de un spinner personalizado que se mostrará durante la carga de datos de la aplicación.
+		\item Mediante la elección de deporte favorito durante el registro, se dotará al usuario de un \emph{spinner} personalizado que se mostrará durante la carga de datos de la aplicación.
 	\end{enumerate}
 	\item \textbf{Contenido principal}
 	\begin{enumerate}
 		\item Un usuario podrá consultar todas las partidas disponibles en una localización mediante un mapa donde se situarán todas las disponibles filtradas por deporte y las partidas en las que ya esté inscrito.
-		\item Mediante el doble click sobre el mapa se rellenará el campo de localización en el formulario. Si el usuario desea coger su posición actual, bastará con pinchar sobre el botón \textbf{`Coger posición'} que se encontrará en el formulario.
+		\item Mediante el doble \emph{click} sobre el mapa se rellenará el campo de localización en el formulario. Si el usuario desea coger su posición actual, bastará con pinchar sobre el botón \textbf{`Coger posición'} que se encontrará en el formulario.
 		\item Las partidas tendrán un límite de inscripción de 2 jugadores como mínimo y 30 como máximo.
 		\item La partida podrá ser eliminada únicamente por el creador.
-		\item Al hacer click sobre un icono de partida sobre el mapa, se mostrará la información de la partida: localización y jugadores inscritos.
+		\item Al hacer \emph{click} sobre un icono de partida sobre el mapa, se mostrará la información de la partida: localización y jugadores inscritos.
 	\end{enumerate}	
 	\item \textbf{Perfil}
 	\begin{enumerate}
@@ -481,8 +486,28 @@ En el plan de trabajo podemos diferenciar las siguientes fases:
 \begin{itemize}
 	\item \textbf{Fase 1 - Establecimiento de requisitos y búsqueda y aprendizaje de las herramientas:} en esta fase inicial se han extraído los requisitos iniciales de la aplicación, así como las herramientas necesarias para su desarrollo y su aprendizaje.
 	\item \textbf{Fase 2 - Desarrollo de prototipos:} es la fase más extensa en cuanto a tiempo, durante el desarrollo de cada parte de la aplicación se ha desarrollado un prototipo como base para su posterior mejora.\\
-	La tareas realizadas durante esta fase se agrupan en: establecimiento de requisitos, diseño de base de datos y estructura de los documentos, diseño de interfaces de usuario y servicios requeridos, desarrollo de las interfaces y y servicios y por último pruebas de funcionalidad.
-	\item \textbf{Fase 3 - Despliegue y pruebas:} en esta fase final se ha procedido al despliegue de la aplicación y pruebas por parte de usuarios reales a toda la funcionalidad de la aplicación para su posterior mejora ,en caso de ser necesaria.
+	Las tareas realizadas durante esta fase se agrupan en: establecimiento de requisitos, diseño de base de datos y estructura de los documentos, diseño de interfaces de usuario y servicios requeridos, desarrollo de las interfaces y servicios y por último pruebas de funcionalidad.\\
+	
+	Los prototipos desarrollados y su relación con los requisitos de la aplicación son los siguientes:\\
+	
+	En primer prototipo sería el correspondiente a las páginas de Login y Registro, los cuales satisfacen al primero punto de los requisitos expuestos en el apartado anterior.\\
+	
+	El segundo de los prototipos era la página principal dónde se mostraban y creaban las partidas, satisfaciendo los requisitos, de la experiencia de usuario, 1, 2, 3, 5, 6, 7.\\
+	
+	Mediante el tercer prototipo (sección de consulta del tiempo) se satisface el punto número 3 de la experiencia de usuario.\\
+	
+	El cuarto prototipo es el correspondiente a la página de añadir y eliminar amigos, por el cual quedaría cubierto el punto número 9 de la sección de experiencia de usuario.\\
+	
+	El quinto y último prototipo es la página de perfil, quedando satisfecho todo el apartado de requisitos de perfil de usuario, expuesto anteriormente.
+	
+	\item \textbf{Fase 3 - Despliegue y pruebas:} en esta fase final se ha procedido al despliegue de la aplicación y pruebas por parte de usuarios reales a toda la funcionalidad de la aplicación para su posterior mejora ,en caso de ser necesaria.\\
+	
+	El despliegue se ha realizado de forma local desde mi ordenador personal, mediante el comando \verb|npm serve| se lanza el servidor que servirá la aplicación. Otro dispositivo conectado en la misma red deberá lanzar una petición contra la dirección IP 192.168.1.44 y el puerto 3000 (definido puerto por defecto en el servidor expressJS).\\
+	
+	Previamente se habilitó la configuración del firewall del ordenador para aceptar peticiones externas en dicho puerto; en caso contrario hubiesen sido rechazadas.
+	
+	
+	
 \end{itemize}
 
 
@@ -491,7 +516,6 @@ En el plan de trabajo podemos diferenciar las siguientes fases:
 % DISEÑO E IMPLEMENTACIÓN %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\cleardoublepage
 \chapter{Diseño e implementación}
 
 Durante este capítulo se va a describir en profundidad los procesos de diseño e implementación del proyecto. En primer lugar se explica la arquitectura utilizada, las herramientas utilizadas durante el desarrollo y por último su despliegue.\\ 
@@ -500,10 +524,13 @@ Durante este capítulo se va a describir en profundidad los procesos de diseño e 
 \label{sec:sec1}
 
 El modelo de arquitectura elegido ha sido la denominada \textbf{MEAN Stack} (figura ~\ref{fig:arquitectura}), cuyo acrónimo hace referencia a las arquitecturas desarrolladas con MongoDB, ExpressJS, Angular y NodeJS.\\
+Las tecnologías utilizadas para el desarrollo de la parte \emph{Front-End} son Angular, Angular Material y NodeJS; mientras que las utilizadas para el \emph{Back-End} son ExpressJS, NodeJS y MongoDB.\\
+La comunicación entre la parte del cliente y la del servidor se realizará mediante servicios \emph{REST}. El servidor (ExpressJS) realizará la obtención y escritura de datos en la BBDD (MongoDB) mediante \textbf{Mongoose}.
+
 
 \begin{itemize}
 	\item MongoDB: base de datos \underline{NoSQL} donde se almacenará la información.
-	\item NodeJS: Permite ejecutar javascript en el lado del servidor.
+	\item NodeJS: Permite ejecutar Javascript en el lado del servidor.
 	\item ExpressJS: Framework Javascript del lado del servidor.
 	\item Angular: Framework Javascript del lado del cliente.
 \end{itemize}
@@ -533,7 +560,7 @@ Para la geolocalización existen numerosas APIs como la propia de HTML5 o la de G
 
 \textsl{\textbf{Mapa}}\\
 
-Existen APIs de mapas de código abierto como \textbf{LeafletJS}\footnote{\url{https://leafletjs.com/}} , para nuestro caso he optado por la de \textbf{Google}\footnote{\url{https://developers.google.com/maps/documentation/javascript/tutorial?hl=es}}. En la funcionalidad de esta aplicación no aportará gran diferencia en su uso, sin embargo la opción del Street View nos permitirá ver previamente a la quedada deportiva donde se sitúa la pista, muy útil en caso de no conocer el sitio.\\
+Existen APIs de mapas de código abierto como \textbf{LeafletJS}\footnote{\url{https://leafletjs.com/}} , para nuestro caso he optado por la de \textbf{Google}\footnote{\url{https://developers.google.com/maps/documentation/javascript/tutorial?hl=es}}. En la funcionalidad de esta aplicación no aportará gran diferencia en su uso, sin embargo la opción del \emph{Street View} nos permitirá ver previamente a la quedada deportiva donde se sitúa la pista, muy útil en caso de no conocer el sitio.\\
 
 \textsl{\textbf{Consulta tiempo atmosférico}}\\
 
@@ -544,22 +571,22 @@ Para esta aplicación se ha utilizado la API de \textbf{Openweathermap}\footnote{
 \textsl{\textbf{IU}}\\
 
 Como uno de los requisitos fundamentales se ha fijado que la aplicación debe ser atractiva al usuario y eficiente en cuanto a que el tiempo de creación de las partidas debe ser el mínimo y lo más intuitivo posible.
-Para la maquetación se ha utilizado la tecnología \textbf{Flexbox} y para ciertos componentes se han usado los de angular material.\\
+Para la maquetación se ha utilizado la tecnología \textbf{Flexbox} y para ciertos componentes se han usado los de Angular Material.\\
 Gracias a Flexbox la aplicación se adaptará al dispositivo en el que esté siendo utilizada, readaptando las plantillas en función del tamaño disponible. 
 %Si utilizas una base de datos, no te olvides de incluir también un diagrama de entidad-relación.
 
 \section{Entorno de desarrollo} 
 \label{sec:sec3}
-Tras buscar la herramientas necesarias para el desarrollo empezamos a `montar' el entorno de la aplicación, utilizaremos el IDE \textbf{Visual Studio Code}. Nos dotará de herramientas para el desarrollo como una consola de comandos, pluggins que facilitarán el desarrollo del typescript (como es TSLint\footnote{\url{https://palantir.github.io/tslint/}}) e integración de sistemas de control de versiones como es Git.
+Tras buscar la herramientas necesarias para el desarrollo empezamos a `montar' el entorno de la aplicación, utilizaremos el IDE \textbf{Visual Studio Code}. Nos dotará de herramientas para el desarrollo como una consola de comandos, pluggins que facilitarán el desarrollo del Typescript (como es TSLint\footnote{\url{https://palantir.github.io/tslint/}}) e integración de sistemas de control de versiones como es Git.
 
 \subsection{Creación de la aplicación}
 
 En primer lugar deberemos tener instalado NodeJS, el cual será el entorno de ejecución de nuestra aplicación, además de MongoDB.
 
-Una vez hayamos instalado NodeJS deberemos instalar el intérprete de comandos de Angular (CLI), lo que nos facilitará en gran medida la creación de componentes para la parte de FRONT.\\
-Mediante el comando: \textit{ng new xxx} creamos toda la estructura del proyecto angular, dispondremos de comandos como: \textit{ng generate service  name}, \textit{ng generate class name}, \textit{ng generate directive name}... para la creación de componentes, servicios, clases y todo aquello que necesitemos.
+Una vez hayamos instalado NodeJS deberemos instalar el intérprete de comandos de Angular (CLI), lo que nos facilitará en gran medida la creación de componentes para la parte de \emph{Front-End}.\\
+Mediante el comando: \verb|ng new xxx| creamos toda la estructura del proyecto Angular, dispondremos de comandos como: \verb|ng generate service  name|, \verb|ng generate class name|, \verb|ng generate directive name|, para la creación de componentes, servicios, clases y todo aquello que necesitemos.
 
-En todo proyecto NodeJS disponemos de un archivo llamado package.json en el cual se definen propiedades del proyecto como son:
+En todo proyecto NodeJS disponemos de un archivo llamado \textbf{package.json} en el cual se definen propiedades del proyecto como son:
 
 \begin{itemize}
 	\item Nombre de tu proyecto.
@@ -571,57 +598,57 @@ En todo proyecto NodeJS disponemos de un archivo llamado package.json en el cual
 \end{itemize}
 
 entre otros muchos. Dentro de la propiedad de dependencias incluiremos todas aquellas necesarias para nuestra aplicación que no haya metido por defecto el Angular CLI.\\
-Para el uso de los mapas y angular material incluiremos la dependencia mediante los siguientes comandos:\\
+Para el uso de los mapas y Angular Material incluiremos la dependencia mediante los siguientes comandos:\\
 
 
 \begin{enumerate}
-	\item npm install - -save @agm/core
-	\item npm install - -save @angular/material @angular/cdk
-	\item npm install - -save @angular/animations
+	\item \verb|npm install - -save @agm/core|
+	\item \verb|npm install - -save @angular/material @angular/cdk|
+	\item \verb|npm install - -save @angular/animations|
 \end{enumerate}
 
-Mediante el flag - -save dejaremos guardada esa dependencia en el package.json, de modo que ejecutando sobre la carpeta raíz del proyecto npm install se intalarán todas las dependencias para la ejecución del proyecto Angular. Todas las dependencias quedan en una carpeta llamada node\_modules.\\
+Mediante el flag \verb|- -save| dejaremos guardada esa dependencia en el package.json, de modo que ejecutando sobre la carpeta raíz del proyecto \verb|npm install| se intalarán todas las dependencias para la ejecución del proyecto Angular. Todas las dependencias quedan en una carpeta llamada node\_modules.\\
 
-Con esto hemos acabado de iniciar la parte FRONT, a continuación vamos con el BACK:\\
+Con esto hemos acabado de iniciar la parte \emph{Front-End}, a continuación vamos con el \emph{Back-End}:\\
 
-Mediante el comando npm init y tras completar una serie de preguntas para inicializar el package.json con ciertos parámetros (nombre proyecto, autor...), incluiremos las siguientes dependencias:
+Mediante el comando \verb|npm init| y tras completar una serie de preguntas para inicializar el package.json con ciertos parámetros (nombre proyecto, autor, etc), incluiremos las siguientes dependencias:
 \begin{enumerate}
-	\item \textbf{express}:  dependencia necesaria para la creación de un servidor web expressJS.
-	\item \textbf{body-parser}: analiza el body de la petición y lo deja accesible a través del objeto req.body.
-	\item \textbf{path}: módulo para construir el path  deseado y apuntar a los archivos generados por angular en la carpeta dist tras compilarlo.
-	\item \textbf{express-jwt}: middleware encargado de validar JsonWebTokens enviados en las peticiones.
+	\item \textbf{express}:  dependencia necesaria para la creación de un servidor web ExpressJS.
+	\item \textbf{body-parser}: analiza el \textit{body} de la petición y lo deja accesible a través del objeto \textit{req.body}.
+	\item \textbf{path}: módulo para construir el \emph{path}  deseado y apuntar a los archivos generados por Angular en la carpeta \textit{dist} tras compilarlo.
+	\item \textbf{express-jwt}: \emph{middleware} encargado de validar JsonWebTokens enviados en las peticiones.
 	\item \textbf{http}: módulo para crear el servidor y recibir las peticiones.
-	\item \textbf{jsonwebtoken}: módulo encargado de la creación del JsonWebTokens tras logearse con éxito.
+	\item \textbf{jsonwebtoken}: módulo encargado de la creación del JsonWebTokens tras autenticarse con éxito.
 	\item \textbf{mongoose}: librería para interactuar con MongoDB.
 	\item \textbf{nodemailer}: 	módulo que permite enviar correos electrónicos, necesario para las notificaciones.
 \end{enumerate}
 
-Con la instalación de todos estos módulos ya tendriamos listo el BACK con todos los elementos necesarios para recibir las peticiones y actuar en función de cada una.
+Con la instalación de todos estos módulos ya tendríamos listo el \emph{Back-End} con todos los elementos necesarios para recibir las peticiones y actuar en función de cada una.
 
 \section{Diseño de las páginas}
 
 En esta sección se realizará el diseño de las partes que compondrán nuestra aplicación, distinguiremos entre la página y los componentes que componen cada una de ellas. 
-Como requisito para poder navegar entre las distintas páginas estableceremos un token, que será generado durante el login y sin el cual serás redirigido a la página de login.
+Como requisito para poder navegar entre las distintas páginas estableceremos un \textit{token}, que será generado durante el \emph{login} y sin el cual serás redirigido a la página de \emph{login}.
 
 \subsection{Diseño principal y Registro}
 
-Nuestra aplicación dispondrá de un header mediante el cuál se navegará por las distintas secciones de la aplicación, dependiendo de la dirección cargada en el navegador se cargará una página y sus correpondientes componentes. 
+Nuestra aplicación dispondrá de un \textit{header} mediante el cuál se navegará por las distintas secciones de la aplicación, dependiendo de la dirección cargada en el navegador se cargará una página y sus correspondientes componentes. 
 
-Por defecto la página cargada tras el login será el \emph{HOME}, en caso de no haberse logeado previamente la aplicación le redirigirá al login.
+Por defecto la página cargada tras el \emph{login} será el \emph{HOME}, en caso de no haberse autenticado previamente la aplicación le redirigirá al \emph{login}.
 
-Esto lo hará con la ayuda del módulo \textit{express-jwt}, mediante el cual el servidor comprobará en cada petición si existe dicho token, si es válido y si no está fuera de fecha (dispone de una duración de validez de 1 hora).\\
+Esto lo hará con la ayuda del módulo \textit{express-jwt}, mediante el cual el servidor comprobará en cada petición si existe dicho \textit{token}, si es válido y si no está fuera de fecha (dispone de una duración de validez de 1 hora).\\
 
 \textsl{\textbf{Header}}\\
 
-Como se definió anteriormente en los requisitos la página debe ser responsive, por lo que se adaptará a cualquier tamaño de pantalla. 
+Como se definió anteriormente en los requisitos la página debe ser \emph{responsive}, por lo que se adaptará a cualquier tamaño de pantalla. 
 
-Dispondrá de 4 botones y cada uno de ellos cargará los componentes correspondientes a su página, existirá un quinto botón situado a la derecha del todo del header encargado de cerrar la sesión.
+Dispondrá de 4 botones y cada uno de ellos cargará los componentes correspondientes a su página, existirá un quinto botón situado a la derecha del todo del \textit{header} encargado de cerrar la sesión.
 
-Al reducirse el tamaño de la pantalla se distribuirán todos los botones de forma que entren todos en el header, aumentando su height si es necesario.
+Al reducirse el tamaño de la pantalla se distribuirán todos los botones de forma que entren todos en el \textit{header}, aumentando su \emph{height} si es necesario.
 
 \subsection{Registro de usuarios}
 
-Para el registro de los usuarios definiremos en el archivo app-routing.module el path \textit{registry} y definiremos la carga del componente correspondiente a ese estado. (figura ~\ref{fig:registry})
+Para el registro de los usuarios definiremos en el archivo app-routing.module el \emph{path} \textit{registry} y definiremos la carga del componente correspondiente a ese estado. (figura ~\ref{fig:registry})
 
 \begin{figure}[H]
 	\centering
@@ -630,20 +657,20 @@ Para el registro de los usuarios definiremos en el archivo app-routing.module el
 	\label{fig:registry}
 \end{figure}
 
-El componente estará compuesto por un formualrio en el que se rellenarán los siguientes campos:
+El componente estará compuesto por un formulario en el que se rellenarán los siguientes campos:
 
 \begin{itemize}
 		\item \textbf{Nombre de usuario}.
 		\item \textbf{Email}: para el envío de notificaciones.
 		\item \textbf{Contraseña y confirmación}.
-		\item \textbf{Deporte favorito}: en función del elegido tendrá un spinner diferente y cargará por defecto partidas cercanas de ese deporte.
+		\item \textbf{Deporte favorito}: en función del elegido tendrá un \emph{spinner} diferente y cargará por defecto partidas cercanas de ese deporte.
 		\item \textbf{Ciudad}: para la carga de partidas e información del tiempo.
 		\item \textbf{Código postal}: para la carga de partidas e información del tiempo.
 \end{itemize}
 	
-El formulario dispondrá de verificaciones mientras se rellena cada campo, una vez rellenados todos y solo cuando todos cumplan los requisitos se desbloqueará el botón aceptar para enviar los datos al BACK y realizar validaciones posteriores como que el usuario no exista ya en la aplicación.
+El formulario dispondrá de verificaciones mientras se rellena cada campo, una vez rellenados todos y solo cuando todos cumplan los requisitos se desbloqueará el botón aceptar para enviar los datos al \emph{Back-End} y realizar validaciones posteriores como que el usuario no exista ya en la aplicación.
 
-En caso de que no exista el usuario se creará un documento User (figura ~\ref{fig:users}) y se almacenará en la colección Users.
+En caso de que no exista el usuario se creará un documento \emph{User} (figura ~\ref{fig:users}) y se almacenará en la colección \emph{Users}.
 
 \begin{figure}[H]
 	\centering
@@ -656,50 +683,52 @@ En caso de que no exista el usuario se creará un documento User (figura ~\ref{fi
 
 Al igual que en el caso del registro se definirá su estado y componente a cargar correspondiente, dispondrá de un formulario con 2 campos a rellenar que son nombre de usuario y contraseña.
 
-Una vez rellenados se desbloquerá el botón \textbf{Siguiente} el cuál enviará los datos al servidor para su validación. En caso de éxito se enviará un token en la respuesta del servidor y se almacenará en el Local Storage, una vez logeado se redirigirá al estado home.
+Una vez rellenados se desbloquerá el botón \textbf{Siguiente}, el cuál enviará los datos al servidor para su validación. En caso de éxito se enviará un \textit{token} en la respuesta del servidor y se almacenará en el \textbf{Local Storage}; una vez autenticado se redirigirá al estado \emph{home}.
 
 \textsl{\textbf{Token}}\\
 
-Para navegar por la aplicación hemos establecido un token que se crea durante el login, dicho token se almacena en el Local Storage. En el módulo encargado del routing se añade una propiedad en el objeto declarado para la carga del componente con su estado correspondiente que se encargará de comprobar si existe dicho token.\\
+Para navegar por la aplicación hemos establecido un \textit{token} que se crea durante el \emph{login}; dicho \textit{token} se almacena en el \textbf{Local Storage}. En el módulo encargado del \emph{routing} se añade una propiedad en el objeto declarado para la carga del componente con su estado correspondiente que se encargará de comprobar si existe dicho \textit{token}.\\
 
-Para que disponga de esta funcionalidad se implementa la clase \textbf{CanActivate} y como comprobación se tratará de obtener el token declarado como \textit{currentUser}, sólo permitirá la carga de los componentes si la comprobación devuelve true. En caso contrario no lo cargará y redirigirá a la página de login.
+Para que disponga de esta funcionalidad se implementa la clase \textbf{CanActivate} (figuras ~\ref{fig:canActivate}  ~\ref{fig:routCanActivate}) y como comprobación se tratará de obtener el \textit{token} declarado como \textit{currentUser}, sólo permitirá la carga de los componentes si la comprobación devuelve true. En caso contrario no lo cargará y redirigirá a la página de \emph{login}.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=10cm, keepaspectratio]{img/canactivate}
 	\caption{Implementación CanActivate}
+	\label{fig:canActivate}
 	\centering
 	\includegraphics[width=10cm, keepaspectratio]{img/authGuard}
 	\caption{Declaración en el routing}
+	\label{fig:routCanActivate}
 \end{figure}
 
 La comprobación se realizará para todos los estados, exceptuando Login y Registro.
 
 \subsection{Home}
 
-Esta será la página con la funcionalidad principal de la aplicación, lo primero de todo será declarar el estado en el archivo app-routing.module.ts.\\
+Esta será la página con la funcionalidad principal de la aplicación, lo primero de todo será declarar el estado en el archivo \emph{app-routing.module.ts}.\\
 
 Como elementos principales tendrá:
 
 \begin{enumerate}
 	\item \textbf{Formulario de creación de partida}:\\
-	El componente padre será home.component, dentro del cual insertaremos como directiva otro llamado create-game. Este componente será el formulario encargado de la creación de la partida, dispone de campos a rellenar que son \textit{Nombre de la partida}, \textit{Deporte}, \textit{Nº límite de jugadores}, \textit{Fecha y hora} y \textit{Dirección}.\\
+	El componente padre será \emph{home.component}, dentro del cual insertaremos como directiva otro llamado \emph{create-game}. Este componente será el formulario encargado de la creación de la partida, dispone de campos a rellenar que son \textit{Nombre de la partida}, \textit{Deporte}, \textit{Nº límite de jugadores}, \textit{Fecha y hora} y \textit{Dirección}.\\
 	
-	Cada campo del formulario tiene una propiedad required que una vez rellenados, y si la propiedad error (validaciones específicas) de cada campo es null, cambia el estado de la propiedad valid del objeto Form a true, con lo que se desbloqueará el botón crear que enviará los datos al BACK para su validación. Toda la funcionalidad del formulario será gracias al módulo ReactiveForms, el cual dota al tag \textit{form} de herramientas para validación de datos y manejo de eventos.\\
+	Cada campo del formulario tiene una propiedad \emph{required} que una vez rellenados, y si la propiedad error (validaciones específicas) de cada campo es \emph{null}, cambia el estado de la propiedad \emph{valid} del objeto Form a \emph{true}, con lo que se desbloqueará el botón crear que enviará los datos al \emph{Back-End} para su validación. Toda la funcionalidad del formulario será gracias al módulo ReactiveForms, el cual dota al tag \textit{form} de herramientas para validación de datos y manejo de eventos.\\
 	
-	Si no existe ya el nombre de la partida en la Base de Datos, se creará el documento Game y se almacenará en la colección Games, además se actualizará el documento correspondiente al usuario que la creó insertando el id (correspondiente al de la colección Game) de la partida en el campo games, además del código postal y el deporte.\\
+	Si no existe ya el nombre de la partida en la Base de Datos, se creará el documento \emph{Game} y se almacenará en la colección \emph{Games}, además se actualizará el documento correspondiente al usuario que la creó insertando el \textbf{id} (correspondiente al de la colección \emph{Game}) de la partida en el campo \emph{games}, además del código postal y el deporte.\\
 	
-	Por último se le añade un botón de \textbf{Coger posición} con el que en lugar de introducir la dirección de forma manual, el evento click lanzará la petición para obtener la geolocalización mediante la funcionadlidad de HTML5.\\
+	Por último se le añade un botón de \textbf{Coger posición} con el que en lugar de introducir la dirección de forma manual, el evento \emph{click} lanzará la petición para obtener la geolocalización mediante la funcionalidad de HTML5.\\
 	
-	Una vez obtenidas las coordenadas con \textit{navigator.geolocation.getCurrentPosition()}, utilizaremos la latitud y longitud obtenidas para llamar a la API de Google de Geolocation y obtener los datos asociados como son calle, número, ciudad y código postal. Para el uso de API necesitaremos una key generada desde la página de Google para desarrolladores. En cada llamada a la API debemos incluir dicha key para tener acceso al servicio.
-	Una vez obtenidos los datos solicitados, rellenaremos los campos del formulario para la creación de la partida gracias al data-binding.
+	Una vez obtenidas las coordenadas con \textit{navigator.geolocation.getCurrentPosition()}, utilizaremos la latitud y longitud obtenidas para llamar a la API de Google de Geolocation y obtener los datos asociados como son calle, número, ciudad y código postal. Para el uso de API necesitaremos una \emph{key} generada desde la página de Google para desarrolladores. En cada llamada a la API debemos incluir dicha \emph{key} para tener acceso al servicio.
+	Una vez obtenidos los datos solicitados, rellenaremos los campos del formulario para la creación de la partida gracias al \emph{data-binding} (ver figura ~\ref{fig:createGame}).
 	
 	\item \textbf{Mapa:}\\
-	Mediante el módulo \textit{AgmCoreModule} haremos uso de la directiva agm-map en el html de la página home. De entre todas las propiedades de entrada nosotros haremos uso de la latitud, longitud y zoom para situar la región del mapa a mostrar, también haremos uso del evento soportado como es el doble click para fijar un marcador en el mapa (por defecto el doble click era para hacer zoom). Le pasaremos la información obtenida del mapa con la acción del doble click (latitud, longitud) a la API de Google para obtener la dirección física de ese punto y añadirla al formulario de creación.\\
+	Mediante el módulo \textit{AgmCoreModule} haremos uso de la directiva agm-map en el HTML de la página home. De entre todas las propiedades de entrada nosotros haremos uso de la latitud, longitud y zoom para situar la región del mapa a mostrar, también haremos uso del evento soportado como es el doble \emph{click} para fijar un marcador en el mapa (por defecto el doble \emph{click} era para hacer zoom). Le pasaremos la información obtenida del mapa con la acción del doble \emph{click} (latitud, longitud) a la API de Google para obtener la dirección física de ese punto y añadirla al formulario de creación.\\
 	
-	Además de la directiva agm-map, utilizaremos agm-marker para situar los puntos de las partidas. Los parámetros de entrada serán latitud, longitud, icono y título; el único evento que se controlará es el click sobre el icono que se utilizará para mostrar la información de la partida.
+	Además de la directiva \emph{agm-map}, utilizaremos \emph{agm-marker} para situar los puntos de las partidas. Los parámetros de entrada serán latitud, longitud, icono y título; el único evento que se controlará es el \emph{click} sobre el icono que se utilizará para mostrar la información de la partida.
 	
-	Todos los parámetros de entrada se obtienen mediante un servicio y se asignan a variables de la clase en el home.component.ts, en el home.component.html se pasan dichas variables a los parámetros de entrada de la directiva.
+	Todos los parámetros de entrada se obtienen mediante un servicio y se asignan a variables de la clase en el \emph{home.component.ts}, en el \emph{home.component.html} se pasan dichas variables a los parámetros de entrada de la directiva.
 	
 	Se deben definir una serie de filtros de búsqueda para las partidas:
 	\begin{itemize}
@@ -708,18 +737,120 @@ Como elementos principales tendrá:
 		\item Radio button con las opciones de partidas: `Mis partidas' y `Otras'.
 	\end{itemize}
 	 
-	Nada mas cargar la página home, se obtendrán a través de un servicio los datos del usuario  que se pasarán a otro servicio y así cargar de forma predefinida las partidas propias del jugador de su deporte favorito en su ciudad.En caso de no estar inscrito en ninguna se mostrará un mensaje debajo del mapa de que no hay partidas. Al rellenar los filtros y pulsar un botón \textbf{Buscar} se lanzará el mismo servicio de búsqueda inicial pero con los nuevos parámetros.
+	Nada más cargar la página home, se obtendrán a través de un servicio los datos del usuario  que se pasarán a otro servicio y así cargar de forma predefinida las partidas propias del jugador de su deporte favorito en su ciudad. En caso de no estar inscrito en ninguna se mostrará un mensaje debajo del mapa de que no hay partidas. Al rellenar los filtros y pulsar un botón \textbf{Buscar} se lanzará el mismo servicio de búsqueda inicial pero con los nuevos parámetros.
 	
-	Una vez obtenidos los datos se le asignarán a los objetos que utiliza el html en el mapa a través del data-binding.
+	Una vez obtenidos los datos se le asignarán a los objetos que utiliza el HTML en el mapa a través del \emph{data-binding} (ver figura ~\ref{fig:map}).
 	
-	\item \textbf{Información de la partida sobre la que se ha hecho click}:\\
-	Toda la información de una partida clickeada la guardamos en un objeto llamado gameClicked, por defecto al obtener la información de todas nos quedaremos con la primera para mostrar su información. Al pulsar sobre el marcador de una partida, obtenemos el campo title y a partir de él obtenemos el objeto del array de las partidas y mostramos su información.
+	\item \textbf{Información de la partida sobre la que se ha hecho \emph{click}}:\\
+	Toda la información de una partida clickeada la guardamos en un objeto llamado gameClicked, por defecto al obtener la información de todas nos quedaremos con la primera para mostrar su información. Al pulsar sobre el marcador de una partida, obtenemos el campo \emph{title} y a partir de él obtenemos el objeto del array de las partidas y mostramos su información.
 	
-	En el documento games hemos guardado un campo llamado \textbf{host} donde almacenamos el nombre del creador.
+	En el documento \emph{games} hemos guardado un campo llamado \emph{host} donde almacenamos el nombre del creador. En el caso de ser \emph{host} le damos la opción al usuario de eliminar dicha partida de la colección, eliminándolo tanto en el documento \emph{game} de la colección \emph{games} como en el array del campo \emph{games} en los documento \emph{user} correspondientes.\\
+	
+	En el caso de ser el \emph{host} también se habilitará un buscador con el que se podrán añadir gente de tu lista de amigos, al introducir 3 caracteres sobre el buscador se lanzará un servicio mediante el cuál obtendrá los amigos que coincidan parcialmente con lo introducido. Una vez obtenida la respuesta del servicio desplegará la opciones posibles en el \emph{input} y solo pinchando sobre una se rellenará el input con el valor y habilitará el botón \textbf{Añadir}. Al pulsar sobre añadir el componente \emph{friends-searcher} emite un evento que captura el componente home con los valores obtenidos e imprimirá un \emph{popUp} con el mensaje de que ese amigo ya está añadido si ya existía en la información de la partida (objeto gameClicked), si no existe lo añadirá a dicho objeto y lo imprimirá en la pantalla.\\
+	
+	Por último al ser \emph{host} también existirá la opción de eliminar jugadores pulsando sobre un botón al lado de cada nombre de los jugadores. Al pulsarlo se enviarán el \textbf{id} de la partida y el del jugador a eliminar, se eliminará del documento \emph{game} obtenido mediante el \textbf{id} y se eliminará el \textbf{id} de dicha partida en el documento del jugador eliminado. 
+	
+	Para el caso de no ser \emph{host}, existirá un botón mediante el cual añadirte a la partida, aparecerá en el caso de que el filtro 'Resto' sea el pulsado y que el número de jugadores no haya llegado a su tope (ver figura ~\ref{fig:infoGame}).
 	
 \end{enumerate}
 
+\begin{figure}[H]
+	\includegraphics[width=18cm, keepaspectratio]{img/createGame}
+	\caption{Flujo creación de partida}
+	\label{fig:createGame}	
+	\vspace{2cm} 
+	\includegraphics[width=18cm, keepaspectratio]{img/mapdiagram}
+	\caption{Flujo acciones sobre mapa}
+	\label{fig:map}
+	\vspace{2cm} 
+	\includegraphics[width=18cm, keepaspectratio]{img/infogamediagram}
+	\caption{Flujo información de partida}
+	\label{fig:infoGame}
+	
+	
+\end{figure}
 
+
+\subsection{Tiempo}
+
+En esta pestaña definiremos el tiempo atmosférico de los próximos 5 días, en primer lugar definimos el estado \emph{weather} en el módulo \emph{routing} y la carga del WetaherComponent.\\
+
+En la carga inicial del componente se lanzará un servicio mediante el cual obtendremos la ciudad con la que se registró el usuario y CP. A continuación mediante otro servicio obtendremos un JSON con todas las ciudades disponibles para consultar, este JSON solo se solicitará en la primera llamada y quedará almacenado para búsquedas posteriores durante la sesión. 
+
+Si la ciudad se encuentra entre las disponibles se realizará la llamada a la API de Openweathermap, en dicha llamada hay que incluir una \emph{key} para poder obtener la información además de otros parámetros como son:
+\begin{itemize}
+	\item ID de la ciudad obtenida del JSON.
+	\item Key de la API.
+	\item Idioma.
+	\item Unidades métricas.
+\end{itemize}
+
+Al tener la posibilidad de pago y optar por la versión gratuita los datos obtenidos serán de los próximos 6 días y de cada 3 horas. En nuestro caso parsearemos la información  de 9:00 a 21:00. Hay que tener en cuenta que toma la hora actual como referencia en la petición y si son las 11:00 cogerá como primera hora de referencia las 12:00 (Empieza a contar desde las 00:00).
+
+De toda la información disponible nos quedaremos con la hora, temperatura media e \textbf{id} de la imagen del tiempo con la que formaremos una URL para mostrar un icono propio de la API. Todos estos datos se asignan a un objeto que se renderizará en el HTML mediante el \emph{data-binding}.\\
+
+Por último añadiremos un buscador para buscar otras ciudades, el proceso será el mismo que antes cambiando la ciudad del usuario por defecto del usuario por la que se desea buscar ahora. En caso de no existir la ciudad dentro de las disponibles se informará mediante una imagen con mensaje.
+
+\subsection{Lista de amigos y añadir amigos}
+
+Aquí distinguiremos 3 componentes:\\
+
+\begin{enumerate}
+	\item \textbf{Friends:}\\
+	El correspondiente a la página principal, contendrá a los otros 2 componentes que son tablas para mostrar la lista de amigos añadidos y la otra con todos los disponibles, en primer lugar se declara dicho estado en el módulo de \emph{routing}. Este componente se encargará de comunicar los otros 2 componentes, cuando se elimine un amigo de la lista se informará al otro mediante un evento y se añadirá a la lista de disponibles. Cuando se agregue uno se informará a la tabla de amigos para que lo muestre en los disponibles. 
+	\item \textbf{All-users-table:}\\
+	
+	Haremos uso de Angular Material y de su componente genérico de tablas, dispondrá de paginado, ordenación en función del deporte y número de elementos a mostrar variable (5 y 10). En la carga inicial de la página obtendremos todos los usuarios disponibles, enviaremos en el servicio los siguientes datos:
+	\begin{itemize}
+		\item Nombre del usuario.
+		\item Ordenación: ascendente o descendente.
+		\item Número de elementos.
+		\item Página.
+		\item Filtro: por defecto será \emph{null}, se modifica en caso de introducir un nombre específico o parcial para la búsqueda.
+	\end{itemize}
+	
+	En la primera carga devolverá los 5 primeros usuarios ordenados alfabéticamente por deporte. Si modificas la ordenación lanzará el servicio automáticamente, al igual que si modificas el número de elementos o cargas la siguiente página.\\
+	Existe la posibilidad de buscar un nombre de usuario particular, cada vez que se introduzca un carácter en el \emph{input} sobre la tabla se lanzará el servicio con los parámetros fijados. En el caso de no encontrar resultados mostrará un mensaje bajo la tabla.\\
+	Al pulsar sobre un botón en en cada fila de la tabla, añadirá el usuario correspondiente y enviará un evento al componente padre (Friends) para que se lo comunique al componente de la tabla que muestra la lista de amigos añadidos, que lanzará el servicio para obtener la lista y actualizará la tabla.
+	
+	\item \textbf{Friends-table:}\\
+	Para esta tabla el servicio inicial obtendrá la lista de amigos del usuario enviando los mismos parámetros para la paginación, etc.\\
+	En este caso dispondrá de un botón eliminar, cuando se elimine el usuario seleccionado correctamente se realizará la misma comunicación entre componentes que cuando se agregaba, sin embargo en este caso será la tabla donde se muestran todos los usuarios disponibles la que lanzará el servicio para obtener la lista actualizada.
+\end{enumerate}
+
+
+\subsection{Perfil}
+
+Debemos disponer de una página donde editar los datos guardados cuando nos registramos, al igual que con el resto lo primero será registrar la página en el \emph{routing}.\\
+
+El componente mostrará una tabla con los datos básicos del usuario:\\
+\begin{multicols}{2}
+	\begin{itemize}
+		\item Nombre de usuario.
+		\item Correo.
+		\item Contraseña.
+		\item Deporte.
+		\item Ciudad.
+		\item CP.
+	\end{itemize}
+\end{multicols}
+
+Cada campo se podrá modificar, una vez enviados los datos al servidor se realizarán las validaciones necesarias para cada campo como que el nombre o correo sean únicos.\\
+
+La modificación de contraseña cargará un componente con 3 campos a rellenar, la contraseña actual, contraseña nueva y confirmación de la contraseña. Será el componente \emph{new-password} el encargado de validar que la nueva y la confirmación coincidan y que se han rellenado los 3 campos antes de desbloquear el botón para su validación en el servidor.
+
+Al pulsar sobre el botón \textbf{Confirmar} se le enviará la información al servidor.
+En el caso de que al tratar de modificar algún dato el servidor fallará o no pasará la validación se informará mediante un \emph{popUp}. Si se modifica correctamente se informará mediante un mensaje sobre la tabla, con un botón para quitar el mensaje.
+\subsection{Logout}
+
+En el \textit{header} se declararon los botones de navegación que cargaban cada estado y su componente correspondiente. En el caso del \emph{logout} lo único que hará será llamar al servicio \emph{authenticationService} y la operación \emph{logout}, eliminará datos propios de la clase usados para la petición en el resto de servicios que son:
+\begin{itemize}
+	\item Nombre de usuario.
+	\item Token de sesión.
+	\item ID del usuario.
+\end{itemize}
+
+También se eliminará del \textbf{Local Storage} el objeto \emph{currentUser} y se redirigirá al \emph{login}, completando el cierre de sesión.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % RESULTADOS %
@@ -728,17 +859,54 @@ Como elementos principales tendrá:
 \cleardoublepage
 \chapter{Resultados}
 
-En este capítulo se incluyen los resultados de tu trabajo fin de grado.
+Como última fase del proyecto se debe realizar un prueba funcional de la aplicación desarrollada, cuyo objetivo es comprobar la experiencia de los usuarios y verificar que los requisitos definidos inicialmente han sido satisfechos y depurar posibles fallos de la aplicación.\\
 
-Si es una herramienta de análisis lo que has realizado, aquí puedes poner ejemplos de haberla utilizado para que se vea su utilidad.
+\section{Objetivos de la prueba}
 
+El objetivo principal de la prueba es obtener resultados sobre la funcionalidad de la aplicación mediante el uso por parte de los usuarios. El producto final debe cumplir los requisitos marcados inicialmente  entre los que destaca que sea los más intuitivo y rápido posible la creación de partidas.
+
+\section{Desarrollo de la prueba}
+
+Para el desarrollo de la prueba era necesario disponer de un dispositivo, ya fuera ordenador de mesa, portátil o móvil. Como servidor he utilizado mi ordenador personal.\\
+
+Una vez lanzada la aplicación, se comienza con la prueba. La prueba está compuesta de los siguientes pasos:\\
+
+\begin{enumerate}
+	\item Registro de perfil.
+	\item Login.
+	\item Añadir/eliminar amigo.
+	\item Crear un partida.
+	\item Eliminar una partida creada.
+	\item Añadirse a una partida.
+	\item Consultar el tiempo.
+	\item Modificar datos del perfil.
+\end{enumerate}
+
+Tras la realización de estos pasos se ha rellenado un encuesta de valoración de usabilidad, se puntúa de 0 a 10 ciertos parámetros de calidad.
+
+\section{Resultado de la prueba}
+
+Tras la prueba se han establecido los puntos más importantes a valorar acerca de la aplicación: usabilidad, utilidad, diseño e intuitividad.\\
+
+Durante la prueba no se dieron indicaciones de cómo se podía obtener la ubicación para la partida, pese a ello descubrieron rápidamente que mediante el doble \emph{click} sobre el mapa podía obtenerse automáticamente la dirección física.\\
+
+En la gráfica ~\ref{fig:encuesta} se pueden observar las puntuaciones de cada usuario, pese a no tener datos suficientes se puede observar que en general ha obtenido una gran valoración. Destaca la usabilidad (fluidez de la app) y la utilidad.
+
+\begin{figure}[H]
+	\includegraphics[width=14cm, keepaspectratio]{img/encuesta}
+	\caption{Encuesta}
+	\label{fig:encuesta}	
+	\vspace{2cm} 
+	\includegraphics[width=14cm, keepaspectratio]{img/average}
+	\caption{Nota media}
+	\label{fig:media}	
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % CONCLUSIONES %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\cleardoublepage
 \chapter{Conclusiones}
 \label{chap:conclusiones}
 Anteriormente se han expuesto temas como la descripción del problema y motivación para el desarrollo del proyecto y el desarrollo de la solución y análisis del comportamiento en un entorno real. En este capítulo final se recogen las conclusiones del trabajo realizado, así como posibles mejoras y trabajos futuros.
@@ -763,7 +931,7 @@ Se puede concluir que los objetivos marcados han sido cumplidos con éxito.
 \label{sec:aplicacion}
 
 Durante el grado he cursado una gran cantidad de asignaturas de programación, cada cuál me ha aportado habilidades muy útiles para el desarrollo de este proyecto.\\
-Entre todas ellas puedo destacar 3 como las mas importantes ya que eran específicas del desarrollo web.
+Entre todas ellas puedo destacar 3 como las mas importantes ya que eran específicas del desarrollo Web.
 
 \begin{itemize}
   \item Servicios y Aplicaciones Telemáticas.
@@ -771,12 +939,12 @@ Entre todas ellas puedo destacar 3 como las mas importantes ya que eran específi
   \item Ingenería de Sistemas de la Información.
 \end{itemize}
 
-La primera asignatura (SAT), se centraba en el aprendizaje de la parte \textbf{BACK} cuya práctica final consistió en la realización de una práctica basada en el framework \textit{DJANGO}\footnote{\url{https://www.djangoproject.com/start/}} y la base de datos \textbf{SQLite}.\\
-A nivel de diseño FRONT fue muy básico ya que el objetivo fue centrarnos en el tratamiento de datos, fue una introducción al html y css.\\
+La primera asignatura (SAT), se centraba en el aprendizaje de la parte \emph{Back-End} cuya práctica final consistió en la realización de una práctica basada en el \emph{framework} \textit{DJANGO}\footnote{\url{https://www.djangoproject.com/start/}} y la base de datos \textbf{SQLite}.\\
+A nivel de diseño \emph{Front-End} fue muy básico ya que el objetivo fue centrarnos en el tratamiento de datos, fue una introducción al HTML y CSS.\\
 
-La segunda de ellas (DAT) se centró en la parte FRONT, entre las tecnologías impartidas estaban \textbf{jquery, HTML5 y CSS3}. Además de la utilización de una librería de diseño web como es \textit{Bootstrap}\footnote{\url{https://getbootstrap.com/docs/4.3/getting-started/introduction/}}.\\
+La segunda de ellas (DAT) se centró en la parte \emph{Front-End}, entre las tecnologías impartidas estaban \textbf{jquery, HTML5 y CSS3}. Además de la utilización de una librería de diseño Web como es \textit{Bootstrap}\footnote{\url{https://getbootstrap.com/docs/4.3/getting-started/introduction/}}.\\
 
-La última de ellas (ISI) fue la más completa de ellas, se pusieron en práctica todos los conocimientos adquiridos mediante la realización de un proyecto final el cual se trataba de una plataforma web de minijuegos.
+La última de ellas (ISI) fue la más completa de ellas, se pusieron en práctica todos los conocimientos adquiridos mediante la realización de un proyecto final el cual se trataba de una plataforma Web de minijuegos.
 Se dividió el proyecto en 3 partes:
 \begin{enumerate}
 	\item Plataforma de acceso.
@@ -784,17 +952,17 @@ Se dividió el proyecto en 3 partes:
 	\item Interfaz de usuario del juego (IU).
 \end{enumerate}
 
-Durante la asignatura se estudiaron diversas tecnologías como MeteorJS, NodeJS, MongoDB y javascript como lenguaje.
-En mi caso tuve que realizar la IU mediante Canvas, por lo que sobre todo desarrolle en javascript.\\
+Durante la asignatura se estudiaron diversas tecnologías como MeteorJS, NodeJS, MongoDB y Javascript como lenguaje.
+En mi caso tuve que realizar la IU mediante Canvas, por lo que sobre todo desarrolle en Javascript.\\
 
-El conjunto de todas las asignaturas y tecnologías empleadas me han servido como base sólida para el aprendizaje de otras más actuales con las que he realizado esta práctica final. Sin el aprendizaje de HTML, CSS, javascript y jquery la realización de una aplicación en Angular habría sido prácticamente imposible.\\
+El conjunto de todas las asignaturas y tecnologías empleadas me han servido como base sólida para el aprendizaje de otras más actuales con las que he realizado esta práctica final. Sin el aprendizaje de HTML, CSS, Javascript y jquery la realización de una aplicación en Angular habría sido prácticamente imposible.\\
 
-El haber aprendido java durante la carrera también ha facilitado el aprendizaje de typescript ya que tienen una estructura similar en la declaración de clases.
+El haber aprendido java durante la carrera también ha facilitado el aprendizaje de Typescript ya que tienen una estructura similar en la declaración de clases.
 
 \section{Lecciones aprendidas}
 \label{sec:lecciones_aprendidas}
 
-Con el desarrollo del proyecto he podido desarrollar capacidades hasta entonces explotadas en menor medida, tanto en mi época como estudiante así como durante mi experiencia como profesional en el sector de las aplicaciones web.\\
+Con el desarrollo del proyecto he podido desarrollar capacidades hasta entonces explotadas en menor medida, tanto en mi época como estudiante así como durante mi experiencia como profesional en el sector de las aplicaciones Web.\\
 
 En resumen podría enumerar la siguientes:
 
@@ -831,10 +999,10 @@ Otro tipo de mejoras posibles serían las relacionadas con la ampliación de conte
 % APÉNDICE(S) %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\cleardoublepage
-\appendix
-\chapter{Manual de usuario}
-\label{app:manual}
+%\cleardoublepage
+%\appendix
+%\chapter{Manual de usuario}
+%\label{app:manual}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -842,12 +1010,12 @@ Otro tipo de mejoras posibles serían las relacionadas con la ampliación de conte
 % BIBLIOGRAFIA %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\cleardoublepage
-
 % Las siguientes dos instrucciones es todo lo que necesitas
 % para incluir las citas en la memoria
 \bibliographystyle{abbrv}
-\bibliography{memoria}  % memoria.bib es el nombre del fichero que contiene
+\bibliography{memoria}
+\nocite{*}
+% memoria.bib es el nombre del fichero que contiene
 % las referencias bibliográficas. Abre ese fichero y mira el formato que tiene,
 % que se conoce como BibTeX. Hay muchos sitios que exportan referencias en
 % formato BibTeX. Prueba a buscar en http://scholar.google.com por referencias
